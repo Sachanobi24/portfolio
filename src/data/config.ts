@@ -258,7 +258,7 @@ export const config = {
     { emoji: "🏃", nom: "Sport", desc: "Running et activités outdoor" },
   ],
 
-
+engagement: "",
   // ----------------------------------------------------------
   // NAVIGATION
   // ----------------------------------------------------------
