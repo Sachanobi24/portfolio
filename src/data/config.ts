@@ -221,46 +221,12 @@ export const config = {
   // ----------------------------------------------------------
   veille: [
     {
-      categorie: "Cybersécurité",
-      titre: "Zero Trust Architecture",
-      contenu:
-        "Le modèle Zero Trust révolutionne la sécurité réseau en ne faisant confiance à aucun utilisateur par défaut, même interne.",
-      date: "2025",
-    },
-    {
-      categorie: "Cloud",
-      titre: "Edge Computing",
-      contenu:
-        "L'edge computing rapproche le traitement des données de leur source, réduisant la latence pour les applications critiques.",
-      date: "2025",
-    },
-    {
-      categorie: "Réseau",
-      titre: "Wi-Fi 7 (802.11be)",
-      contenu:
-        "Le Wi-Fi 7 offre des débits multi-gigabits et une latence ultra-faible grâce au Multi-Link Operation (MLO).",
-      date: "2024",
-    },
-    {
       categorie: "Système",
       titre: "Conteneurisation",
       contenu:
         "Docker et Kubernetes s'imposent comme standards pour le déploiement d'applications en production.",
       date: "2024",
-    },
-    {
-      categorie: "Sécurité",
-      titre: "IA et cyberdéfense",
-      contenu:
-        "L'intelligence artificielle est intégrée dans les SIEM pour détecter les menaces en temps réel.",
-      date: "2025",
-    },
-    {
-      categorie: "Protocoles",
-      titre: "IPv6 adoption",
-      contenu:
-        "L'adoption d'IPv6 s'accélère avec l'épuisement des adresses IPv4 et les nouvelles exigences réglementaires.",
-      date: "2024",
+      keywords: ["docker", "kubernetes", "conteneur"], 
     },
   ],
 

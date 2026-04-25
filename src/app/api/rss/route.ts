@@ -4,34 +4,14 @@ import { NextResponse } from 'next/server'
 // Modifiez cette liste pour ajouter/retirer des sources
 const FEEDS = [
   {
-    url: 'https://www.cert.ssi.gouv.fr/feed/',
-    source: 'ANSSI',
-    categorie: 'Cybersécurité',
+    url: 'https://kubernetes.io/feed.xml',
+    source: 'Kubernetes Blog',
+    categorie: 'Conteneurisation',
   },
   {
-    url: 'https://feeds.feedburner.com/TheHackersNews',
-    source: 'The Hacker News',
-    categorie: 'Cybersécurité',
-  },
-  {
-    url: 'https://www.lemondeinformatique.fr/flux-rss/thematique/securite/rss.xml',
-    source: 'Le Monde Informatique',
-    categorie: 'Sécurité',
-  },
-  {
-    url: 'https://www.zdnet.fr/feeds/rss/actualites/securite/',
-    source: 'ZDNet France',
-    categorie: 'Réseaux & Sécurité',
-  },
-  {
-    url: 'https://www.it-connect.fr/feed/',
-    source: 'IT-Connect',
-    categorie: 'Systèmes & Réseaux',
-  },
-  {
-    url: 'https://korben.info/feed',
-    source: 'Korben',
-    categorie: 'Tech & Sécurité',
+    url: 'https://www.docker.com/blog/feed/',
+    source: 'Docker Blog',
+    categorie: 'Conteneurisation',
   },
 ]
 
