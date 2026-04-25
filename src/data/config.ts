@@ -1,0 +1,298 @@
+// ============================================================
+//  FICHIER DE CONFIGURATION DU PORTFOLIO
+//  Modifiez ce fichier pour personnaliser tout votre portfolio
+// ============================================================
+
+export const config = {
+
+  // ----------------------------------------------------------
+  // INFORMATIONS PERSONNELLES
+  // ----------------------------------------------------------
+  identity: {
+    prenom: "Mathys",
+    nom: "Yssoufi",
+    poste: "Administrateur Systèmes & Réseaux",
+    statut: "DISPONIBLE — BTS SIO SISR 2024/2026",
+    description:
+      "Étudiant en BTS SIO option SISR, passionné par les infrastructures réseau, la cybersécurité et l'administration système Linux/Windows.",
+    ville: "France",
+    email: "",           // ex: "mathys@exemple.fr"
+    linkedin: "",        // ex: "https://linkedin.com/in/mathys-yssoufi"
+    github: "",          // ex: "https://github.com/mathys-yssoufi"
+    cvUrl: "",           // ex: "/cv-mathys.pdf" (mettez votre CV dans /public)
+  },
+
+  // ----------------------------------------------------------
+  // SECTION À PROPOS
+  // ----------------------------------------------------------
+  apropos: {
+    paragraphes: [
+      "Bonjour ! Je suis <strong>Mathys Yssoufi</strong>, étudiant en BTS SIO (Services Informatiques aux Organisations) option SISR (Solutions d'Infrastructure, Systèmes et Réseaux).",
+      "Passionné par l'infrastructure informatique, la cybersécurité et l'administration des systèmes, je me spécialise dans la gestion des réseaux, la virtualisation et les services cloud.",
+    ],
+    infos: [
+      { label: "Formation",      valeur: "BTS SIO option SISR" },
+      { label: "Spécialité",     valeur: "Réseaux & Systèmes" },
+      { label: "Disponibilité",  valeur: "Stage / Alternance" },
+    ],
+    stats: [
+      { nombre: "2",    label: "ans BTS" },
+      { nombre: "10+",  label: "Projets" },
+      { nombre: "SISR", label: "Option" },
+    ],
+  },
+
+  // ----------------------------------------------------------
+  // COMPÉTENCES TECHNIQUES
+  // ----------------------------------------------------------
+  competences: [
+    {
+      categorie: "🌐 Réseaux",
+      items: [
+        { nom: "Routage / Switching",    niveau: 85 },
+        { nom: "TCP/IP / VLAN",          niveau: 80 },
+        { nom: "VPN / Firewall",         niveau: 75 },
+        { nom: "Cisco / Packet Tracer",  niveau: 70 },
+      ],
+    },
+    {
+      categorie: "🖥️ Systèmes",
+      items: [
+        { nom: "Linux (Ubuntu/Debian)", niveau: 80 },
+        { nom: "Windows Server",        niveau: 75 },
+        { nom: "Active Directory",      niveau: 70 },
+        { nom: "Virtualisation (VMware)", niveau: 65 },
+      ],
+    },
+    {
+      categorie: "🔐 Sécurité & Scripting",
+      items: [
+        { nom: "Bash / Shell",      niveau: 70 },
+        { nom: "PowerShell",        niveau: 65 },
+        { nom: "Cybersécurité",     niveau: 60 },
+        { nom: "Python (admin sys)", niveau: 55 },
+      ],
+    },
+  ],
+
+  // ----------------------------------------------------------
+  // PROJET PROFESSIONNEL
+  // ----------------------------------------------------------
+  projetPro: {
+    vision:
+      "Après mon BTS SIO option SISR, je souhaite évoluer dans le domaine de l'administration des systèmes et réseaux, avec une spécialisation en cybersécurité.",
+    objectifsCourt: [
+      "Décrocher un stage / une alternance dans une DSI ou SSII",
+      "Obtenir une certification réseau (Cisco CCNA ou CompTIA Network+)",
+      "Approfondir mes compétences en virtualisation (VMware, Proxmox)",
+    ],
+    objectifsLong: [
+      "Évoluer vers un poste d'Ingénieur Systèmes & Réseaux",
+      "Me spécialiser en cybersécurité (SOC Analyst, Pen Tester)",
+      "Obtenir des certifications avancées (CCNP, CEH, OSCP)",
+      "Contribuer à la sécurisation des infrastructures d'entreprises",
+    ],
+    secteurs: [
+      { emoji: "🏢", nom: "ESN / SSII",         desc: "Projets variés, montée en compétences rapide" },
+      { emoji: "🏥", nom: "Secteur hospitalier", desc: "Criticité des SI, sécurité des données médicales" },
+      { emoji: "🏛️", nom: "Secteur public",      desc: "Service aux citoyens, projets d'envergure" },
+      { emoji: "🔐", nom: "Cybersécurité",       desc: "Audit, pentest, protection des infrastructures" },
+    ],
+    poursuiteEtudes:
+      "Bachelor / Licence pro Réseaux & Télécoms ou Cybersécurité envisagés après le BTS.",
+  },
+
+  // ----------------------------------------------------------
+  // EXPÉRIENCES PROFESSIONNELLES
+  // ----------------------------------------------------------
+  experiences: [
+    {
+      date: "2025 — En cours",
+      titre: "Technicien Réseaux & Systèmes",
+      entreprise: "Stage / Entreprise — Ville",
+      description:
+        "Administration des serveurs Windows et Linux, configuration réseau, support utilisateurs, mise en place de VPN.",
+      tags: ["Linux", "Windows Server", "VPN"],
+    },
+    {
+      date: "2024",
+      titre: "Stage Administrateur Réseau",
+      entreprise: "Entreprise — Ville",
+      description:
+        "Configuration de switches Cisco, mise en place de VLANs, supervision du réseau avec Nagios, documentation technique.",
+      tags: ["Cisco", "VLAN", "Nagios"],
+    },
+  ],
+
+  competencesAcquises: [
+    { tag: "Réseau",   titre: "Infrastructure réseau",    desc: "Configuration routeurs, switches, mise en place VLAN, gestion DHCP/DNS." },
+    { tag: "Système",  titre: "Administration serveurs",  desc: "Déploiement et maintenance de serveurs Linux/Windows, virtualisation." },
+    { tag: "Sécurité", titre: "Cybersécurité",            desc: "Pare-feu, VPN, audit de sécurité, sensibilisation des utilisateurs." },
+    { tag: "Support",  titre: "Helpdesk & Support",       desc: "Support niveau 1 et 2, ticketing, documentation des procédures." },
+  ],
+
+  // ----------------------------------------------------------
+  // FORMATION
+  // ----------------------------------------------------------
+  formations: [
+    {
+      date: "2024 — 2026",
+      titre: "BTS SIO option SISR",
+      etablissement: "Services Informatiques aux Organisations\nSolutions d'Infrastructure, Systèmes et Réseaux",
+      description:
+        "Formation en 2 ans axée sur l'administration des réseaux, la virtualisation, la cybersécurité et la gestion des systèmes d'exploitation.",
+      tags: ["Réseaux", "Linux", "Windows Server", "Virtualisation", "Cybersécurité"],
+    },
+    {
+      date: "2021 — 2024",
+      titre: "Baccalauréat",
+      etablissement: "Lycée — Ville",
+      description:
+        "Obtention du Baccalauréat. Intérêt marqué pour les matières scientifiques et l'informatique.",
+      tags: [],
+    },
+  ],
+
+  matieresBTS: [
+    "Administration des réseaux",
+    "Cybersécurité",
+    "Virtualisation",
+    "Scripting Bash / PowerShell",
+    "Windows Server / AD",
+    "Services réseau (DNS, DHCP, NTP)",
+    "Supervision réseau",
+    "Support et assistance",
+  ],
+
+  // ----------------------------------------------------------
+  // CERTIFICATIONS
+  // ----------------------------------------------------------
+  certifications: [
+    { emoji: "🌐", nom: "Cisco CCNA (en cours)", organisme: "Cisco Networking Academy", date: "2025-2026", url: "" },
+    { emoji: "🔐", nom: "CompTIA Security+",     organisme: "CompTIA",                  date: "À venir",   url: "" },
+    { emoji: "🐧", nom: "Linux Essentials",      organisme: "LPI",                      date: "2024",      url: "" },
+    { emoji: "☁️", nom: "Microsoft AZ-900",      organisme: "Microsoft",                date: "À venir",   url: "" },
+  ],
+
+  // ----------------------------------------------------------
+  // PROJETS RÉALISÉS
+  // ----------------------------------------------------------
+  projets: [
+    {
+      emoji: "🌐",
+      titre: "Infrastructure VLAN",
+      type: "Infrastructure réseau",
+      description:
+        "Conception et déploiement d'une infrastructure réseau avec VLANs, routage inter-VLAN sur routeur Cisco.",
+      tags: ["Cisco", "VLAN", "Routage"],
+      url: "",   // lien vers le projet ou rapport
+    },
+    {
+      emoji: "🖥️",
+      titre: "Serveur Linux",
+      type: "Administration système",
+      description:
+        "Installation et configuration d'un serveur Debian : Apache, Nginx, PHP, MySQL, SSH, certificats SSL.",
+      tags: ["Linux", "Apache", "SSH"],
+      url: "",
+    },
+    {
+      emoji: "🔐",
+      titre: "Audit sécurité",
+      type: "Cybersécurité",
+      description:
+        "Réalisation d'un audit de sécurité complet : scan de vulnérabilités, rapport et recommandations.",
+      tags: ["Nmap", "Nessus", "OWASP"],
+      url: "",
+    },
+    {
+      emoji: "☁️",
+      titre: "Infrastructure cloud",
+      type: "Cloud & Virtualisation",
+      description:
+        "Déploiement d'une infrastructure virtualisée sous Proxmox avec haute disponibilité.",
+      tags: ["Proxmox", "VMware", "Cloud"],
+      url: "",
+    },
+  ],
+
+  // ----------------------------------------------------------
+  // VEILLE TECHNOLOGIQUE
+  // ----------------------------------------------------------
+  veille: [
+    {
+      categorie: "Cybersécurité",
+      titre: "Zero Trust Architecture",
+      contenu:
+        "Le modèle Zero Trust révolutionne la sécurité réseau en ne faisant confiance à aucun utilisateur par défaut, même interne.",
+      date: "2025",
+    },
+    {
+      categorie: "Cloud",
+      titre: "Edge Computing",
+      contenu:
+        "L'edge computing rapproche le traitement des données de leur source, réduisant la latence pour les applications critiques.",
+      date: "2025",
+    },
+    {
+      categorie: "Réseau",
+      titre: "Wi-Fi 7 (802.11be)",
+      contenu:
+        "Le Wi-Fi 7 offre des débits multi-gigabits et une latence ultra-faible grâce au Multi-Link Operation (MLO).",
+      date: "2024",
+    },
+    {
+      categorie: "Système",
+      titre: "Conteneurisation",
+      contenu:
+        "Docker et Kubernetes s'imposent comme standards pour le déploiement d'applications en production.",
+      date: "2024",
+    },
+    {
+      categorie: "Sécurité",
+      titre: "IA et cyberdéfense",
+      contenu:
+        "L'intelligence artificielle est intégrée dans les SIEM pour détecter les menaces en temps réel.",
+      date: "2025",
+    },
+    {
+      categorie: "Protocoles",
+      titre: "IPv6 adoption",
+      contenu:
+        "L'adoption d'IPv6 s'accélère avec l'épuisement des adresses IPv4 et les nouvelles exigences réglementaires.",
+      date: "2024",
+    },
+  ],
+
+  // ----------------------------------------------------------
+  // CENTRES D'INTÉRÊT
+  // ----------------------------------------------------------
+  interets: [
+    { emoji: "💻", nom: "Programmation",      desc: "Développement de scripts et outils d'automatisation" },
+    { emoji: "🔐", nom: "CTF / Hacking éthique", desc: "Participation à des challenges de cybersécurité" },
+    { emoji: "🎮", nom: "Gaming",             desc: "Esport et jeux stratégiques" },
+    { emoji: "📡", nom: "Radio amateur",      desc: "Passion pour les communications radio et les protocoles" },
+    { emoji: "🎵", nom: "Musique",            desc: "Écoute et pratique musicale" },
+    { emoji: "🌍", nom: "Voyages",            desc: "Découverte de cultures et technologies différentes" },
+    { emoji: "📚", nom: "Lecture tech",       desc: "Livres et articles sur l'informatique et la cybersécurité" },
+    { emoji: "🏃", nom: "Sport",              desc: "Running et activités outdoor" },
+  ],
+
+  engagement:
+    "Participation à des associations tech locales, aide à la sensibilisation à la cybersécurité, contribution à des projets open source.",
+
+  // ----------------------------------------------------------
+  // NAVIGATION
+  // ----------------------------------------------------------
+  nav: [
+    { label: "Accueil",         href: "/" },
+    { label: "Projet pro",      href: "/projet-pro" },
+    { label: "Expériences",     href: "/experiences" },
+    { label: "Formation",       href: "/formation" },
+    { label: "Certifications",  href: "/certifications" },
+    { label: "Projets",         href: "/projets" },
+    { label: "Veille",          href: "/veille" },
+    { label: "Intérêts",        href: "/interets" },
+    { label: "Contact",         href: "/contact" },
+  ],
+}
