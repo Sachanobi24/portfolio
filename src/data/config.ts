@@ -16,10 +16,10 @@ export const config = {
     description:
       "Étudiant en BTS SIO option SISR, passionné par les infrastructures réseau, la cybersécurité et l'administration système Linux/Windows.",
     ville: "France",
-    email: "",           // ex: "mathys@exemple.fr"
-    linkedin: "",        // ex: "https://linkedin.com/in/mathys-yssoufi"
-    github: "",          // ex: "https://github.com/mathys-yssoufi"
-    cvUrl: "",           // ex: "/cv-mathys.pdf" (mettez votre CV dans /public)
+    email: "yssoufi.mathyspro@gmail.com",           // ex: "mathys@exemple.fr"
+    linkedin: "www.linkedin.com/in/mathys-yssoufi",        // ex: "https://linkedin.com/in/mathys-yssoufi"
+    github: "https://github.com/Sachanobi24",          // ex: "https://github.com/mathys-yssoufi"
+    cvUrl: "/cv_professionnelle.pdf",           // ex: "/cv-mathys.pdf" (mettez votre CV dans /public)
   },
 
   // ----------------------------------------------------------
@@ -31,13 +31,13 @@ export const config = {
       "Passionné par l'infrastructure informatique, la cybersécurité et l'administration des systèmes, je me spécialise dans la gestion des réseaux, la virtualisation et les services cloud.",
     ],
     infos: [
-      { label: "Formation",      valeur: "BTS SIO option SISR" },
-      { label: "Spécialité",     valeur: "Réseaux & Systèmes" },
-      { label: "Disponibilité",  valeur: "Stage / Alternance" },
+      { label: "Formation", valeur: "BTS SIO option SISR" },
+      { label: "Spécialité", valeur: "Réseaux & Systèmes" },
+      { label: "Disponibilité", valeur: "Stage" },
     ],
     stats: [
-      { nombre: "2",    label: "ans BTS" },
-      { nombre: "10+",  label: "Projets" },
+      { nombre: "2", label: "ans BTS" },
+      { nombre: "4", label: "Projets" },
       { nombre: "SISR", label: "Option" },
     ],
   },
@@ -49,32 +49,49 @@ export const config = {
     {
       categorie: "🌐 Réseaux",
       items: [
-        { nom: "Routage / Switching",    niveau: 85 },
-        { nom: "TCP/IP / VLAN",          niveau: 80 },
-        { nom: "VPN / Firewall",         niveau: 75 },
-        { nom: "Cisco / Packet Tracer",  niveau: 70 },
+        { nom: "Routage / Switching", niveau: 75 },
+        { nom: "TCP/IP / VLAN", niveau: 75 },
+        { nom: "VPN / Firewall", niveau: 75 },
+        { nom: "Cisco / Packet Tracer", niveau: 75 },
       ],
     },
     {
       categorie: "🖥️ Systèmes",
       items: [
-        { nom: "Linux (Ubuntu/Debian)", niveau: 80 },
-        { nom: "Windows Server",        niveau: 75 },
-        { nom: "Active Directory",      niveau: 70 },
-        { nom: "Virtualisation (VMware)", niveau: 65 },
+        { nom: "Linux (Debian)", niveau: 65 },
+        { nom: "Windows Server", niveau: 85 },
+        { nom: "Active Directory", niveau: 80 },
+        { nom: "Virtualisation (Proxmox)", niveau: 95 },
       ],
     },
     {
       categorie: "🔐 Sécurité & Scripting",
       items: [
-        { nom: "Bash / Shell",      niveau: 70 },
-        { nom: "PowerShell",        niveau: 65 },
-        { nom: "Cybersécurité",     niveau: 60 },
-        { nom: "Python (admin sys)", niveau: 55 },
+        { nom: "Bash / Shell", niveau: 10 },
+        { nom: "PowerShell", niveau: 5 },
+        { nom: "Cybersécurité", niveau: 60 },
+        { nom: "Python (admin sys)", niveau: 10 },
+      ],
+    },
+    {
+      categorie: "🖥️ Développement",
+      items: [
+        { nom: "HTML / CSS", niveau: 75 },
+        { nom: "JavaScript / ES6", niveau: 65 },
+        { nom: "PHP", niveau: 55 },
+        { nom: "C#", niveau: 50 },
+      ],
+    },
+    {
+      categorie: "🗄️ Outils & Frameworks",
+      items: [
+        { nom: "SQL", niveau: 60 },
+        { nom: "Next.js / React", niveau: 55 },
+        { nom: "Docker", niveau: 65 },
+        { nom: "GLPI / Fog", niveau: 60 },
       ],
     },
   ],
-
   // ----------------------------------------------------------
   // PROJET PROFESSIONNEL
   // ----------------------------------------------------------
@@ -93,10 +110,10 @@ export const config = {
       "Contribuer à la sécurisation des infrastructures d'entreprises",
     ],
     secteurs: [
-      { emoji: "🏢", nom: "ESN / SSII",         desc: "Projets variés, montée en compétences rapide" },
+      { emoji: "🏢", nom: "ESN / SSII", desc: "Projets variés, montée en compétences rapide" },
       { emoji: "🏥", nom: "Secteur hospitalier", desc: "Criticité des SI, sécurité des données médicales" },
-      { emoji: "🏛️", nom: "Secteur public",      desc: "Service aux citoyens, projets d'envergure" },
-      { emoji: "🔐", nom: "Cybersécurité",       desc: "Audit, pentest, protection des infrastructures" },
+      { emoji: "🏛️", nom: "Secteur public", desc: "Service aux citoyens, projets d'envergure" },
+      { emoji: "🔐", nom: "Cybersécurité", desc: "Audit, pentest, protection des infrastructures" },
     ],
     poursuiteEtudes:
       "Bachelor / Licence pro Réseaux & Télécoms ou Cybersécurité envisagés après le BTS.",
@@ -125,10 +142,10 @@ export const config = {
   ],
 
   competencesAcquises: [
-    { tag: "Réseau",   titre: "Infrastructure réseau",    desc: "Configuration routeurs, switches, mise en place VLAN, gestion DHCP/DNS." },
-    { tag: "Système",  titre: "Administration serveurs",  desc: "Déploiement et maintenance de serveurs Linux/Windows, virtualisation." },
-    { tag: "Sécurité", titre: "Cybersécurité",            desc: "Pare-feu, VPN, audit de sécurité, sensibilisation des utilisateurs." },
-    { tag: "Support",  titre: "Helpdesk & Support",       desc: "Support niveau 1 et 2, ticketing, documentation des procédures." },
+    { tag: "Réseau", titre: "Infrastructure réseau", desc: "Configuration routeurs, switches, mise en place VLAN, gestion DHCP/DNS." },
+    { tag: "Système", titre: "Administration serveurs", desc: "Déploiement et maintenance de serveurs Linux/Windows, virtualisation." },
+    { tag: "Sécurité", titre: "Cybersécurité", desc: "Pare-feu, VPN, audit de sécurité, sensibilisation des utilisateurs." },
+    { tag: "Support", titre: "Helpdesk & Support", desc: "Support niveau 1 et 2, ticketing, documentation des procédures." },
   ],
 
   // ----------------------------------------------------------
@@ -169,9 +186,9 @@ export const config = {
   // ----------------------------------------------------------
   certifications: [
     { emoji: "🌐", nom: "Cisco CCNA (en cours)", organisme: "Cisco Networking Academy", date: "2025-2026", url: "" },
-    { emoji: "🔐", nom: "CompTIA Security+",     organisme: "CompTIA",                  date: "À venir",   url: "" },
-    { emoji: "🐧", nom: "Linux Essentials",      organisme: "LPI",                      date: "2024",      url: "" },
-    { emoji: "☁️", nom: "Microsoft AZ-900",      organisme: "Microsoft",                date: "À venir",   url: "" },
+    { emoji: "🔐", nom: "CompTIA Security+", organisme: "CompTIA", date: "À venir", url: "" },
+    { emoji: "🐧", nom: "Linux Essentials", organisme: "LPI", date: "2024", url: "" },
+    { emoji: "☁️", nom: "Microsoft AZ-900", organisme: "Microsoft", date: "À venir", url: "" },
   ],
 
   // ----------------------------------------------------------
@@ -226,7 +243,7 @@ export const config = {
       contenu:
         "Docker et Kubernetes s'imposent comme standards pour le déploiement d'applications en production.",
       date: "2024",
-      keywords: ["docker", "kubernetes", "conteneur"], 
+      keywords: ["docker", "kubernetes", "conteneur"],
     },
   ],
 
@@ -234,31 +251,26 @@ export const config = {
   // CENTRES D'INTÉRÊT
   // ----------------------------------------------------------
   interets: [
-    { emoji: "💻", nom: "Programmation",      desc: "Développement de scripts et outils d'automatisation" },
-    { emoji: "🔐", nom: "CTF / Hacking éthique", desc: "Participation à des challenges de cybersécurité" },
-    { emoji: "🎮", nom: "Gaming",             desc: "Esport et jeux stratégiques" },
-    { emoji: "📡", nom: "Radio amateur",      desc: "Passion pour les communications radio et les protocoles" },
-    { emoji: "🎵", nom: "Musique",            desc: "Écoute et pratique musicale" },
-    { emoji: "🌍", nom: "Voyages",            desc: "Découverte de cultures et technologies différentes" },
-    { emoji: "📚", nom: "Lecture tech",       desc: "Livres et articles sur l'informatique et la cybersécurité" },
-    { emoji: "🏃", nom: "Sport",              desc: "Running et activités outdoor" },
+    { emoji: "💻", nom: "Programmation", desc: "Création de petits site web personnels" },
+    { emoji: "🎮", nom: "Gaming", desc: "Esport et jeux stratégiques" },
+    { emoji: "🎵", nom: "Musique", desc: "Écoute" },
+    { emoji: "📚", nom: "Lecture ", desc: "Livres philosophiques et mangas" },
+    { emoji: "🏃", nom: "Sport", desc: "Running et activités outdoor" },
   ],
 
-  engagement:
-    "Participation à des associations tech locales, aide à la sensibilisation à la cybersécurité, contribution à des projets open source.",
 
   // ----------------------------------------------------------
   // NAVIGATION
   // ----------------------------------------------------------
   nav: [
-    { label: "Accueil",         href: "/" },
-    { label: "Projet pro",      href: "/projet-pro" },
-    { label: "Expériences",     href: "/experiences" },
-    { label: "Formation",       href: "/formation" },
-    { label: "Certifications",  href: "/certifications" },
-    { label: "Projets",         href: "/projets" },
-    { label: "Veille",          href: "/veille" },
-    { label: "Intérêts",        href: "/interets" },
-    { label: "Contact",         href: "/contact" },
+    { label: "Accueil", href: "/" },
+    { label: "Projet pro", href: "/projet-pro" },
+    { label: "Expériences", href: "/experiences" },
+    { label: "Formation", href: "/formation" },
+    { label: "Certifications", href: "/certifications" },
+    { label: "Projets", href: "/projets" },
+    { label: "Veille", href: "/veille" },
+    { label: "Intérêts", href: "/interets" },
+    { label: "Contact", href: "/contact" },
   ],
 }
