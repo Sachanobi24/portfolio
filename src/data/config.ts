@@ -49,19 +49,19 @@ export const config = {
     {
       categorie: "🌐 Réseaux",
       items: [
-        { nom: "Routage / Switching", niveau: 75 },
-        { nom: "TCP/IP / VLAN", niveau: 75 },
-        { nom: "VPN / Firewall", niveau: 75 },
-        { nom: "Cisco / Packet Tracer", niveau: 75 },
+        { nom: "Routage / Switching", niveau: 60 },
+        { nom: "TCP/IP / VLAN", niveau: 60 },
+        { nom: "VPN / Firewall", niveau: 60 },
+        { nom: "Cisco / Packet Tracer", niveau: 60 },
       ],
     },
     {
       categorie: "🖥️ Systèmes",
       items: [
-        { nom: "Linux (Debian)", niveau: 65 },
-        { nom: "Windows Server", niveau: 85 },
-        { nom: "Active Directory", niveau: 80 },
-        { nom: "Virtualisation (Proxmox)", niveau: 95 },
+        { nom: "Linux (Debian)", niveau: 55 },
+        { nom: "Windows Server", niveau: 70 },
+        { nom: "Active Directory", niveau: 65 },
+        { nom: "Virtualisation (Proxmox)", niveau: 80 },
       ],
     },
     {
@@ -69,7 +69,7 @@ export const config = {
       items: [
         { nom: "Bash / Shell", niveau: 10 },
         { nom: "PowerShell", niveau: 5 },
-        { nom: "Cybersécurité", niveau: 60 },
+        { nom: "Cybersécurité", niveau: 10 },
         { nom: "Python (admin sys)", niveau: 10 },
       ],
     },
