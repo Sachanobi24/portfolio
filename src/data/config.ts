@@ -69,8 +69,16 @@ export const config = {
       items: [
         { nom: "Bash / Shell", niveau: 10 },
         { nom: "PowerShell", niveau: 5 },
-        { nom: "Cybersécurité", niveau: 60 },
+        { nom: "Cybersécurité", niveau: 5 },
         { nom: "Python (admin sys)", niveau: 10 },
+      ],
+    },
+    {
+      categorie: "🔐 Sécurité & Scripting",
+      items: [
+        { nom: "PowerShell", niveau: 5 },
+        { nom: "Cybersécurité", niveau: 15 },
+        { nom: "Python", niveau: 25 },
       ],
     },
     {
