@@ -115,7 +115,7 @@ export const config = {
       { emoji: "🔐", nom: "Cybersécurité", desc: "Audit, pentest, protection des infrastructures" },
     ],
     poursuiteEtudes:
-      "Bachelor / Licence pro Réseaux & Télécoms ou Cybersécurité envisagés après le BTS.",
+      "Licence pro Réseaux & Télécoms ou Cybersécurité envisagés après le BTS.",
   },
 
   // ----------------------------------------------------------
@@ -123,7 +123,7 @@ export const config = {
   // ----------------------------------------------------------
   experiences: [
     {
-      date: "2025 — En cours",
+      date: "2025-2026 — En cours",
       titre: "Technicien Réseaux & Systèmes",
       entreprise: "Stage / Entreprise — Ville",
       description:
@@ -131,20 +131,20 @@ export const config = {
       tags: ["Linux", "Windows Server", "VPN"],
     },
     {
-      date: "2024",
-      titre: "Stage Administrateur Réseau",
-      entreprise: "Entreprise — Ville",
+      date: "2021-2022",
+      titre: "Stage Réparateur Informatique",
+      entreprise: "SOS informatique — Sartilly",
       description:
-        "Configuration de switches Cisco, mise en place de VLANs, supervision du réseau avec Nagios, documentation technique.",
-      tags: ["Cisco", "VLAN", "Nagios"],
+        "Démontage et remontage de matériel, identifications de pannes, installation de logiciel",
+      tags: [""],
     },
   ],
 
   competencesAcquises: [
     { tag: "Réseau", titre: "Infrastructure réseau", desc: "Configuration routeurs, switches, mise en place VLAN, gestion DHCP/DNS." },
     { tag: "Système", titre: "Administration serveurs", desc: "Déploiement et maintenance de serveurs Linux/Windows, virtualisation." },
-    { tag: "Sécurité", titre: "Cybersécurité", desc: "Pare-feu, VPN, audit de sécurité, sensibilisation des utilisateurs." },
-    { tag: "Support", titre: "Helpdesk & Support", desc: "Support niveau 1 et 2, ticketing, documentation des procédures." },
+    { tag: "Sécurité", titre: "Cybersécurité", desc: "Pare-feu, VPN." },
+    { tag: "Support", titre: "Helpdesk & Support", desc: "Support niveau 1 et 2, ticketing." },
   ],
 
   // ----------------------------------------------------------
@@ -152,7 +152,7 @@ export const config = {
   // ----------------------------------------------------------
   formations: [
     {
-      date: "2024 — 2026",
+      date: "2025 — 2027",
       titre: "BTS SIO option SISR",
       etablissement: "Services Informatiques aux Organisations\nSolutions d'Infrastructure, Systèmes et Réseaux",
       description:
@@ -160,11 +160,11 @@ export const config = {
       tags: ["Réseaux", "Linux", "Windows Server", "Virtualisation", "Cybersécurité"],
     },
     {
-      date: "2021 — 2024",
+      date: "2022 — 2025",
       titre: "Baccalauréat",
-      etablissement: "Lycée — Ville",
+      etablissement: "Julliot de la Morandière — Granville",
       description:
-        "Obtention du Baccalauréat. Intérêt marqué pour les matières scientifiques et l'informatique.",
+        "Obtention du Baccalauréat technologique (STI2D). Intérêt marqué pour les matières scientifiques et l'informatique.",
       tags: [],
     },
   ],
@@ -184,10 +184,7 @@ export const config = {
   // CERTIFICATIONS
   // ----------------------------------------------------------
   certifications: [
-    { emoji: "🌐", nom: "Cisco CCNA (en cours)", organisme: "Cisco Networking Academy", date: "2025-2026", url: "" },
-    { emoji: "🔐", nom: "CompTIA Security+", organisme: "CompTIA", date: "À venir", url: "" },
-    { emoji: "🐧", nom: "Linux Essentials", organisme: "LPI", date: "2024", url: "" },
-    { emoji: "☁️", nom: "Microsoft AZ-900", organisme: "Microsoft", date: "À venir", url: "" },
+    { emoji: "🌐", nom: "Cisco CCNA", organisme: "Cisco Networking Academy", date: "2025-2026", url: "" },
   ],
 
   // ----------------------------------------------------------
@@ -213,21 +210,12 @@ export const config = {
       url: "",
     },
     {
-      emoji: "🔐",
-      titre: "Audit sécurité",
-      type: "Cybersécurité",
-      description:
-        "Réalisation d'un audit de sécurité complet : scan de vulnérabilités, rapport et recommandations.",
-      tags: ["Nmap", "Nessus", "OWASP"],
-      url: "",
-    },
-    {
       emoji: "☁️",
       titre: "Infrastructure cloud",
       type: "Cloud & Virtualisation",
       description:
         "Déploiement d'une infrastructure virtualisée sous Proxmox avec haute disponibilité.",
-      tags: ["Proxmox", "VMware", "Cloud"],
+      tags: ["Proxmox", "Cloud"],
       url: "",
     },
   ],
