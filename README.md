@@ -1,129 +1,28 @@
-# 🖥️ Portfolio — Mathys Yssoufi | BTS SIO SISR
+# Analytics — Guide d'installation
 
-Portfolio Next.js converti depuis le thème WordPress, prêt à déployer sur **Vercel**.
-
----
-
-## 🚀 Déploiement sur Vercel (5 minutes)
-
-### Option A — Via GitHub (recommandé)
-
-1. Crée un compte sur [github.com](https://github.com) et [vercel.com](https://vercel.com)
-2. Crée un **nouveau dépôt** sur GitHub (ex: `portfolio`)
-3. Dépose tous les fichiers de ce dossier dans le dépôt
-4. Sur Vercel → **Add New Project** → importe ton dépôt GitHub
-5. Laisse tous les réglages par défaut → **Deploy**
-6. ✅ Ton portfolio est en ligne !
-
-### Option B — Via Vercel CLI
-
+## 1. Installer la dépendance
 ```bash
-npm install -g vercel
-cd portfolio
-npm install
-vercel
+npm install @upstash/redis
 ```
 
----
+## 2. Créer une base Upstash Redis gratuite
+1. Va sur https://upstash.com → créer un compte
+2. Crée une nouvelle base Redis
+3. Dans l'onglet "REST API", copie les deux clés
 
-## ✏️ Personnalisation
-
-**Un seul fichier à modifier :** `src/data/config.ts`
-
-Ce fichier contient **tout le contenu** du portfolio :
-
-| Section | Ce que tu peux changer |
-|---|---|
-| `identity` | Ton nom, poste, email, LinkedIn, GitHub, CV |
-| `apropos` | Texte de présentation, stats, infos |
-| `competences` | Barres de compétences et pourcentages |
-| `projetPro` | Vision, objectifs, secteurs visés |
-| `experiences` | Stages, alternances avec tags |
-| `formations` | Diplômes et matières |
-| `certifications` | Certifications obtenues |
-| `projets` | Projets réalisés avec liens |
-| `veille` | Articles de veille technologique |
-| `interets` | Centres d'intérêt |
-| `nav` | Liens de navigation |
-
-### Exemple — Changer ton nom :
-```ts
-identity: {
-  prenom: "Prénom",
-  nom: "NomDeFamille",
-  email: "monemail@exemple.fr",
-  linkedin: "https://linkedin.com/in/mon-profil",
-  github: "https://github.com/mon-compte",
-  ...
-}
+## 3. Variables d'environnement
+Dans ton fichier `.env.local` à la racine du projet :
 ```
-
-### Ajouter un projet :
-```ts
-projets: [
-  {
-    emoji: "🔐",
-    titre: "Mon nouveau projet",
-    type: "Cybersécurité",
-    description: "Description du projet...",
-    tags: ["Kali Linux", "Nmap"],
-    url: "https://github.com/mon-projet",  // optionnel
-  },
-  ...
-]
+UPSTASH_REDIS_REST_URL=https://xxxx.upstash.io
+UPSTASH_REDIS_REST_TOKEN=xxxxxxxxxxxxxxxxxxxx
+ADMIN_PASSWORD=ton_mot_de_passe
+ADMIN_SECRET=une_chaine_aleatoire_longue
 ```
+➜ Ajoute ces mêmes variables sur Vercel dans Settings → Environment Variables
 
-### Ajouter ton CV :
-1. Place ton fichier CV dans le dossier `public/` (ex: `public/cv-mathys.pdf`)
-2. Dans `config.ts` : `cvUrl: "/cv-mathys.pdf"`
+## 4. Copier les fichiers
+Copie tout le dossier `src/` de ce ZIP dans ton projet (remplace layout.tsx)
 
----
-
-## 🛠️ Développement local
-
-```bash
-npm install
-npm run dev
-# Ouvre http://localhost:3000
-```
-
----
-
-## 🎨 Design
-
-| Élément | Valeur |
-|---|---|
-| Couleur principale | `#00d4ff` (cyan) |
-| Couleur accent | `#7fff00` (vert) |
-| Fond | `#030d1a` (bleu nuit) |
-| Police titres | Share Tech Mono |
-| Police corps | Exo 2 |
-
-Pour changer les couleurs, modifie les variables CSS dans `src/app/globals.css` → section `:root`.
-
----
-
-## 📁 Structure
-
-```
-src/
-├── app/
-│   ├── layout.tsx          # Layout global
-│   ├── page.tsx            # Accueil + À propos
-│   ├── projet-pro/         # Projet professionnel
-│   ├── experiences/        # Expériences
-│   ├── formation/          # Formation
-│   ├── certifications/     # Certifications
-│   ├── projets/            # Projets réalisés
-│   ├── veille/             # Veille techno
-│   ├── interets/           # Centres d'intérêt
-│   ├── contact/            # Contact
-│   └── globals.css         # Styles globaux
-├── components/
-│   ├── Header.tsx          # Navigation
-│   ├── Footer.tsx          # Pied de page
-│   ├── FadeIn.tsx          # Animation scroll
-│   └── SkillBar.tsx        # Barres de compétences
-└── data/
-    └── config.ts           # ⭐ FICHIER PRINCIPAL À MODIFIER
-```
+## 5. Accéder au dashboard
+- Login  : https://ton-portfolio.vercel.app/admin/login
+- Dashboard : https://ton-portfolio.vercel.app/admin
