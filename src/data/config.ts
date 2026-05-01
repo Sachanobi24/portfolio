@@ -185,7 +185,7 @@ export const config = {
   // CERTIFICATIONS
   // ----------------------------------------------------------
   certifications: [
-    { emoji: "🌐", nom: "Cisco CCNA", organisme: "Cisco Networking Academy", date: "2025-2026", url: "" },
+    { emoji: "🌐", nom: "Cisco CCNA", organisme: "Cisco Networking Academy", date: "2025-2026", url: "/Cisco_Packet_Tracer_certificate.pdf" },
   ],
 
   // ----------------------------------------------------------
