@@ -17,7 +17,7 @@ export const config = {
       "Étudiant en BTS SIO option SISR, passionné par les infrastructures réseau, la cybersécurité et l'administration système Linux/Windows.",
     ville: "France",
     email: "yssoufi.mathyspro@gmail.com",           // ex: "mathys@exemple.fr"
-    linkedin: "www.linkedin.com/in/mathys-yssoufi",        // ex: "https://linkedin.com/in/mathys-yssoufi"
+    linkedin: "https://www.linkedin.com/in/mathys-yssoufi",        // ex: "https://linkedin.com/in/mathys-yssoufi"
     github: "https://github.com/Sachanobi24",          // ex: "https://github.com/mathys-yssoufi"
     cvUrl: "/CV Mathys.pdf",           // ex: "/cv-mathys.pdf" (mettez votre CV dans /public)
   },
@@ -199,6 +199,7 @@ export const config = {
         "Conception et déploiement d'une infrastructure réseau avec VLANs, routage inter-VLAN sur routeur Cisco.",
       tags: ["Cisco", "VLAN", "Routage"],
       url: "/Cisco_Packet_Tracer.png",   // lien vers le projet ou rapport
+      image: "",
     },
     {
       emoji: "🖥️",
@@ -208,6 +209,7 @@ export const config = {
         "Installation et configuration d'un serveur Debian : Apache, Nginx, PHP, MySQL, SSH, certificats SSL.",
       tags: ["Linux", "Apache", "SSH"],
       url: "",
+      image: "",
     },
     {
       emoji: "☁️",
@@ -217,8 +219,28 @@ export const config = {
         "Déploiement d'une infrastructure virtualisée sous Proxmox avec haute disponibilité.",
       tags: ["Proxmox", "Cloud"],
       url: "",
+      image: "",
     },
+    {
+  emoji: "🚗",
+  titre: "Evorox — L'évolution de la voiture",
+  type: "Développement web",
+  description: "Site web présentant l'évolution de l'automobile de 1886 à aujourd'hui : chronologie, innovations clés et galerie photos.",
+  tags: ["HTML", "CSS", "JavaScript"],
+  url: "https://evorox.netlify.app",
+  image: "/evorox-preview.png", 
+},
+{
+  emoji: "♻️",
+  titre: "DISFA — Site e-commerce",
+  type: "Développement web",
+  description: "Création d'un site vitrine e-commerce pour une association vendant des articles faits main à partir de matériaux recyclés.",
+  tags: ["HTML", "CSS", "JavaScript"],
+  url: "",  // si tu le mets en ligne un jour, mets le lien ici
+  image: "",
+},
   ],
+  
 
   // ----------------------------------------------------------
   // VEILLE TECHNOLOGIQUE
