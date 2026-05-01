@@ -2,7 +2,7 @@
 //  FICHIER DE CONFIGURATION DU PORTFOLIO
 //  Modifiez ce fichier pour personnaliser tout votre portfolio
 // ============================================================
-
+formspreeUrl: "https://formspree.io/f/mzdozpqj"
 export const config = {
 
   // ----------------------------------------------------------
