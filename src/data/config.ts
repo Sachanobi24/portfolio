@@ -19,7 +19,7 @@ export const config = {
     email: "yssoufi.mathyspro@gmail.com",           // ex: "mathys@exemple.fr"
     linkedin: "www.linkedin.com/in/mathys-yssoufi",        // ex: "https://linkedin.com/in/mathys-yssoufi"
     github: "https://github.com/Sachanobi24",          // ex: "https://github.com/mathys-yssoufi"
-    cvUrl: "/cv_professionnelle.pdf",           // ex: "/cv-mathys.pdf" (mettez votre CV dans /public)
+    cvUrl: "/CV Mathys.pdf",           // ex: "/cv-mathys.pdf" (mettez votre CV dans /public)
   },
 
   // ----------------------------------------------------------
@@ -198,7 +198,7 @@ export const config = {
       description:
         "Conception et déploiement d'une infrastructure réseau avec VLANs, routage inter-VLAN sur routeur Cisco.",
       tags: ["Cisco", "VLAN", "Routage"],
-      url: "",   // lien vers le projet ou rapport
+      url: "/Cisco_Packet_Tracer.png",   // lien vers le projet ou rapport
     },
     {
       emoji: "🖥️",

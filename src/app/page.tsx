@@ -43,23 +43,23 @@ export default function HomePage() {
 
           {/* Réseau décoratif */}
           <svg className="hero-visual" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="200" cy="200" r="12" fill="none" stroke="#00d4ff" strokeWidth="2"/>
-            <circle cx="80"  cy="100" r="8"  fill="none" stroke="#00d4ff" strokeWidth="1.5"/>
-            <circle cx="320" cy="80"  r="8"  fill="none" stroke="#00d4ff" strokeWidth="1.5"/>
-            <circle cx="350" cy="280" r="8"  fill="none" stroke="#00d4ff" strokeWidth="1.5"/>
-            <circle cx="50"  cy="300" r="8"  fill="none" stroke="#00d4ff" strokeWidth="1.5"/>
-            <circle cx="200" cy="360" r="6"  fill="none" stroke="#7fff00" strokeWidth="1"/>
-            <circle cx="150" cy="60"  r="6"  fill="none" stroke="#7fff00" strokeWidth="1"/>
-            <circle cx="300" cy="180" r="6"  fill="none" stroke="#7fff00" strokeWidth="1"/>
-            <line x1="200" y1="200" x2="80"  y2="100" stroke="#00d4ff" strokeWidth="1" opacity="0.5"/>
-            <line x1="200" y1="200" x2="320" y2="80"  stroke="#00d4ff" strokeWidth="1" opacity="0.5"/>
-            <line x1="200" y1="200" x2="350" y2="280" stroke="#00d4ff" strokeWidth="1" opacity="0.5"/>
-            <line x1="200" y1="200" x2="50"  y2="300" stroke="#00d4ff" strokeWidth="1" opacity="0.5"/>
-            <line x1="200" y1="200" x2="200" y2="360" stroke="#7fff00" strokeWidth="1" opacity="0.4"/>
-            <line x1="80"  y1="100" x2="150" y2="60"  stroke="#00d4ff" strokeWidth="0.5" opacity="0.3"/>
-            <line x1="320" y1="80"  x2="300" y2="180" stroke="#00d4ff" strokeWidth="0.5" opacity="0.3"/>
-            <line x1="350" y1="280" x2="300" y2="180" stroke="#7fff00" strokeWidth="0.5" opacity="0.3"/>
-            <line x1="80"  y1="100" x2="50"  y2="300" stroke="#00d4ff" strokeWidth="0.5" opacity="0.2"/>
+            <circle cx="200" cy="200" r="12" fill="none" stroke="#00d4ff" strokeWidth="2" />
+            <circle cx="80" cy="100" r="8" fill="none" stroke="#00d4ff" strokeWidth="1.5" />
+            <circle cx="320" cy="80" r="8" fill="none" stroke="#00d4ff" strokeWidth="1.5" />
+            <circle cx="350" cy="280" r="8" fill="none" stroke="#00d4ff" strokeWidth="1.5" />
+            <circle cx="50" cy="300" r="8" fill="none" stroke="#00d4ff" strokeWidth="1.5" />
+            <circle cx="200" cy="360" r="6" fill="none" stroke="#7fff00" strokeWidth="1" />
+            <circle cx="150" cy="60" r="6" fill="none" stroke="#7fff00" strokeWidth="1" />
+            <circle cx="300" cy="180" r="6" fill="none" stroke="#7fff00" strokeWidth="1" />
+            <line x1="200" y1="200" x2="80" y2="100" stroke="#00d4ff" strokeWidth="1" opacity="0.5" />
+            <line x1="200" y1="200" x2="320" y2="80" stroke="#00d4ff" strokeWidth="1" opacity="0.5" />
+            <line x1="200" y1="200" x2="350" y2="280" stroke="#00d4ff" strokeWidth="1" opacity="0.5" />
+            <line x1="200" y1="200" x2="50" y2="300" stroke="#00d4ff" strokeWidth="1" opacity="0.5" />
+            <line x1="200" y1="200" x2="200" y2="360" stroke="#7fff00" strokeWidth="1" opacity="0.4" />
+            <line x1="80" y1="100" x2="150" y2="60" stroke="#00d4ff" strokeWidth="0.5" opacity="0.3" />
+            <line x1="320" y1="80" x2="300" y2="180" stroke="#00d4ff" strokeWidth="0.5" opacity="0.3" />
+            <line x1="350" y1="280" x2="300" y2="180" stroke="#7fff00" strokeWidth="0.5" opacity="0.3" />
+            <line x1="80" y1="100" x2="50" y2="300" stroke="#00d4ff" strokeWidth="0.5" opacity="0.2" />
           </svg>
         </div>
       </section>
@@ -92,7 +92,7 @@ export default function HomePage() {
               <div className="about-content">
                 {apropos.paragraphes.map((p, i) => (
                   <p key={i} style={{ marginBottom: '1rem', color: 'var(--text-muted)' }}
-                     dangerouslySetInnerHTML={{ __html: p }} />
+                    dangerouslySetInnerHTML={{ __html: p }} />
                 ))}
               </div>
 
@@ -119,8 +119,8 @@ export default function HomePage() {
 
               <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                 {identity.cvUrl && (
-                  <a href={identity.cvUrl} className="btn btn-primary" download>
-                    Télécharger mon CV
+                  <a href="/cv" className="btn btn-primary">
+                    Voir mon CV
                   </a>
                 )}
                 <Link href="/contact" className="btn btn-outline">Me contacter</Link>
