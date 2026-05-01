@@ -1,6 +1,5 @@
 import FadeIn from '@/components/FadeIn'
 import { config } from '@/data/config'
-import Image from 'next/image'
 
 export default function ProjetsPage() {
   const { projets } = config
@@ -22,24 +21,29 @@ export default function ProjetsPage() {
               <FadeIn key={i} delay={i * 80}>
                 <article className="project-card">
 
-                  {/* Preview image si disponible */}
+                  {/* Preview image */}
                   {projet.image && (
                     <div style={{
-                      position: 'relative',
                       width: '100%',
                       height: '180px',
                       overflow: 'hidden',
                       borderBottom: '1px solid var(--border)',
+                      position: 'relative',
                     }}>
-                      <Image
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
                         src={projet.image}
                         alt={`Aperçu ${projet.titre}`}
-                        fill
-                        style={{ objectFit: 'cover', transition: 'transform 0.4s ease' }}
-                        onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1.05)' }}
-                        onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1)' }}
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'cover',
+                          transition: 'transform 0.4s ease',
+                          display: 'block',
+                        }}
+                        onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.05)' }}
+                        onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)' }}
                       />
-                      {/* Overlay avec lien si url */}
                       {projet.url && (
                         <a
                           href={projet.url}
@@ -48,7 +52,7 @@ export default function ProjetsPage() {
                           style={{
                             position: 'absolute',
                             inset: 0,
-                            background: 'rgba(3,13,26,0.5)',
+                            background: 'rgba(3,13,26,0.6)',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
@@ -60,8 +64,8 @@ export default function ProjetsPage() {
                             letterSpacing: '0.1em',
                             textTransform: 'uppercase',
                           }}
-                          onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '1' }}
-                          onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '0' }}
+                          onMouseEnter={(e) => { e.currentTarget.style.opacity = '1' }}
+                          onMouseLeave={(e) => { e.currentTarget.style.opacity = '0' }}
                         >
                           Visiter le site →
                         </a>
