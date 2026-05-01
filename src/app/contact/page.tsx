@@ -6,25 +6,52 @@ import { config } from '@/data/config'
 export default function ContactPage() {
   const { identity } = config
   const [form, setForm] = useState({ nom: '', email: '', sujet: '', message: '' })
-  const [status, setStatus] = useState<'idle' | 'ok'>('idle')
+  const [status, setStatus] = useState<'idle' | 'sending' | 'ok' | 'error'>('idle')
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    if (!identity.email) {
-      alert('Ajoutez votre email dans src/data/config.ts pour activer le formulaire.')
+
+    // Si pas d'URL Formspree configurée, fallback mailto
+    const formspreeUrl = (config as any).formspreeUrl
+    if (!formspreeUrl) {
+      if (!identity.email) {
+        alert('Ajoutez votre email dans src/data/config.ts pour activer le formulaire.')
+        return
+      }
+      const subject = encodeURIComponent(form.sujet || 'Contact depuis portfolio')
+      const body = encodeURIComponent(`Nom : ${form.nom}\nEmail : ${form.email}\n\n${form.message}`)
+      window.location.href = `mailto:${identity.email}?subject=${subject}&body=${body}`
+      setStatus('ok')
+      setForm({ nom: '', email: '', sujet: '', message: '' })
       return
     }
-    const subject = encodeURIComponent(form.sujet || 'Contact depuis portfolio')
-    const body = encodeURIComponent(
-      `Nom : ${form.nom}\nEmail : ${form.email}\n\n${form.message}`
-    )
-    window.location.href = `mailto:${identity.email}?subject=${subject}&body=${body}`
-    setStatus('ok')
-    setForm({ nom: '', email: '', sujet: '', message: '' })
+
+    // Envoi direct via Formspree
+    setStatus('sending')
+    try {
+      const res = await fetch(formspreeUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: form.nom,
+          email: form.email,
+          subject: form.sujet,
+          message: form.message,
+        }),
+      })
+      if (res.ok) {
+        setStatus('ok')
+        setForm({ nom: '', email: '', sujet: '', message: '' })
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -56,7 +83,22 @@ export default function ContactPage() {
                   fontSize: '0.8rem',
                   color: 'var(--accent)',
                 }}>
-                  ✓ Votre client mail s&apos;est ouvert avec le message pré-rempli.
+                  ✓ Message envoyé avec succès ! Je vous répondrai dès que possible.
+                </div>
+              )}
+
+              {status === 'error' && (
+                <div style={{
+                  background: 'rgba(255,50,50,0.08)',
+                  border: '1px solid rgba(255,50,50,0.3)',
+                  borderRadius: 'var(--radius)',
+                  padding: '1rem',
+                  marginBottom: '1.5rem',
+                  fontFamily: 'var(--font-display)',
+                  fontSize: '0.8rem',
+                  color: '#ff5050',
+                }}>
+                  ✗ Une erreur est survenue. Veuillez réessayer ou me contacter directement par email.
                 </div>
               )}
 
@@ -81,8 +123,13 @@ export default function ContactPage() {
                   <textarea id="contact-message" name="message" placeholder="Votre message..." required
                     value={form.message} onChange={handleChange} />
                 </div>
-                <button type="submit" className="btn btn-primary">
-                  Envoyer le message
+                <button
+                  type="submit"
+                  className="btn btn-primary"
+                  disabled={status === 'sending'}
+                  style={{ opacity: status === 'sending' ? 0.6 : 1, cursor: status === 'sending' ? 'not-allowed' : 'pointer' }}
+                >
+                  {status === 'sending' ? 'Envoi en cours...' : 'Envoyer le message'}
                 </button>
               </form>
             </FadeIn>
@@ -109,7 +156,7 @@ export default function ContactPage() {
                     <span style={{ fontSize: '1.5rem' }}>📍</span>
                     <div>
                       <p style={{ fontFamily: 'var(--font-display)', fontSize: '0.7rem', color: 'var(--text-dim)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Localisation</p>
-                      <p style={{ fontSize: '0.9rem' }}>{identity.ville || 'France'}</p>
+                      <p style={{ fontSize: '0.9rem' }}>{identity.ville || 'Avranches, Normandie, France'}</p>
                     </div>
                   </div>
                 </div>
