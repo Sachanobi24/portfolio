@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+export const dynamic = 'force-dynamic'
 
 // Flux RSS thématiques SISR / cybersécurité / réseaux
 // Modifiez cette liste pour ajouter/retirer des sources
