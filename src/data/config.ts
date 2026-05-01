@@ -266,6 +266,7 @@ export const config = {
     { emoji: "🎵", nom: "Musique", desc: "Écoute" },
     { emoji: "📚", nom: "Lecture ", desc: "Livres philosophiques et mangas" },
     { emoji: "🏃", nom: "Sport", desc: "Running et activités outdoor" },
+    { emoji: "🌐", nom: "Réseaux", desc: "Conception et administration d'infrastructures réseaux." },
   ],
 
   engagement: "",
