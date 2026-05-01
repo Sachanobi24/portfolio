@@ -222,25 +222,25 @@ export const config = {
       image: "",
     },
     {
-  emoji: "🚗",
-  titre: "Evorox — L'évolution de la voiture",
-  type: "Développement web",
-  description: "Site web présentant l'évolution de l'automobile de 1886 à aujourd'hui : chronologie, innovations clés et galerie photos.",
-  tags: ["HTML", "CSS", "JavaScript"],
-  url: "https://evorox.netlify.app",
-  image: "/evorox-preview.png", 
-},
-{
-  emoji: "♻️",
-  titre: "DISFA — Site e-commerce",
-  type: "Développement web",
-  description: "Création d'un site vitrine e-commerce pour une association vendant des articles faits main à partir de matériaux recyclés.",
-  tags: ["HTML", "CSS", "JavaScript"],
-  url: "",  // si tu le mets en ligne un jour, mets le lien ici
-  image: "",
-},
+      emoji: "🚗",
+      titre: "Evorox — L'évolution de la voiture",
+      type: "Développement web",
+      description: "Site web présentant l'évolution de l'automobile de 1886 à aujourd'hui : chronologie, innovations clés et galerie photos.",
+      tags: ["HTML", "CSS", "JavaScript"],
+      url: "https://evorox.netlify.app",
+      image: "/evorox-preview.png",
+    },
+    {
+      emoji: "♻️",
+      titre: "DISFA — Site e-commerce",
+      type: "Développement web",
+      description: "Création d'un site vitrine e-commerce pour une association vendant des articles faits main à partir de matériaux recyclés.",
+      tags: ["HTML", "CSS", "JavaScript"],
+      url: "",  // si tu le mets en ligne un jour, mets le lien ici
+      image: "",
+    },
   ],
-  
+
 
   // ----------------------------------------------------------
   // VEILLE TECHNOLOGIQUE
@@ -267,7 +267,7 @@ export const config = {
     { emoji: "🏃", nom: "Sport", desc: "Running et activités outdoor" },
   ],
 
-engagement: "",
+  engagement: "",
   // ----------------------------------------------------------
   // NAVIGATION
   // ----------------------------------------------------------

@@ -1,3 +1,4 @@
+'use client'
 import FadeIn from '@/components/FadeIn'
 import { config } from '@/data/config'
 
@@ -21,26 +22,12 @@ export default function ProjetsPage() {
               <FadeIn key={i} delay={i * 80}>
                 <article className="project-card">
 
-                  {/* Preview image */}
                   {projet.image && (
-                    <div style={{
-                      width: '100%',
-                      height: '180px',
-                      overflow: 'hidden',
-                      borderBottom: '1px solid var(--border)',
-                      position: 'relative',
-                    }}>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <div style={{ width: '100%', height: '180px', overflow: 'hidden', borderBottom: '1px solid var(--border)', position: 'relative' }}>
                       <img
                         src={projet.image}
                         alt={`Aperçu ${projet.titre}`}
-                        style={{
-                          width: '100%',
-                          height: '100%',
-                          objectFit: 'cover',
-                          transition: 'transform 0.4s ease',
-                          display: 'block',
-                        }}
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.4s ease' }}
                         onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.05)' }}
                         onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)' }}
                       />
@@ -50,19 +37,12 @@ export default function ProjetsPage() {
                           target="_blank"
                           rel="noopener noreferrer"
                           style={{
-                            position: 'absolute',
-                            inset: 0,
+                            position: 'absolute', inset: 0,
                             background: 'rgba(3,13,26,0.6)',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            opacity: 0,
-                            transition: 'opacity 0.3s ease',
-                            fontFamily: 'var(--font-display)',
-                            fontSize: '0.75rem',
-                            color: 'var(--primary)',
-                            letterSpacing: '0.1em',
-                            textTransform: 'uppercase',
+                            display: 'flex', alignItems: 'center', justifyContent: 'center',
+                            opacity: 0, transition: 'opacity 0.3s ease',
+                            fontFamily: 'var(--font-display)', fontSize: '0.75rem',
+                            color: 'var(--primary)', letterSpacing: '0.1em', textTransform: 'uppercase',
                           }}
                           onMouseEnter={(e) => { e.currentTarget.style.opacity = '1' }}
                           onMouseLeave={(e) => { e.currentTarget.style.opacity = '0' }}
@@ -92,13 +72,8 @@ export default function ProjetsPage() {
                     </div>
                     {projet.url && (
                       <div style={{ marginTop: '1.25rem' }}>
-                        <a
-                          href={projet.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn btn-outline"
-                          style={{ fontSize: '0.65rem', padding: '0.4rem 0.75rem' }}
-                        >
+                        <a href={projet.url} target="_blank" rel="noopener noreferrer"
+                          className="btn btn-outline" style={{ fontSize: '0.65rem', padding: '0.4rem 0.75rem' }}>
                           Voir le projet
                         </a>
                       </div>
