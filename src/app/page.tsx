@@ -72,7 +72,17 @@ export default function HomePage() {
           <div className="about-grid" style={{ marginTop: '2rem' }}>
             {/* Avatar */}
             <FadeIn className="about-avatar">
-              <div className="avatar-placeholder">👤</div>
+              <img
+                src="/Photo-Mathys.jpg"
+                alt="Photo de profil"
+                style={{
+                  width: '160px',
+                  height: '160px',
+                  objectFit: 'cover',
+                  borderRadius: '8px',
+                  border: '2px solid var(--border)',
+                }}
+              />
               <div className="avatar-name">
                 {identity.prenom} {identity.nom}<br />
                 <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem', fontFamily: 'var(--font-body)' }}>

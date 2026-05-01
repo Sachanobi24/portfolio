@@ -37,7 +37,7 @@ export const config = {
     ],
     stats: [
       { nombre: "2", label: "ans BTS" },
-      { nombre: "4", label: "Projets" },
+      { nombre: "5", label: "Projets" },
       { nombre: "SISR", label: "Option" },
     ],
   },
@@ -75,19 +75,19 @@ export const config = {
     {
       categorie: "🖥️ Développement",
       items: [
-        { nom: "HTML / CSS", niveau: 75 },
-        { nom: "JavaScript / ES6", niveau: 65 },
+        { nom: "HTML / CSS", niveau: 85 },
+        { nom: "JavaScript", niveau: 65 },
         { nom: "PHP", niveau: 55 },
-        { nom: "C#", niveau: 50 },
+        { nom: "C#", niveau: 40 },
       ],
     },
     {
       categorie: "🗄️ Outils & Frameworks",
       items: [
-        { nom: "SQL", niveau: 60 },
+        { nom: "SQL", niveau: 40 },
         { nom: "Next.js / React", niveau: 55 },
-        { nom: "Docker", niveau: 65 },
-        { nom: "GLPI / Fog", niveau: 60 },
+        { nom: "Docker", niveau: 50 },
+        { nom: "GLPI / Fog", niveau: 85 },
       ],
     },
   ],
