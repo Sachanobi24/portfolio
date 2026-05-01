@@ -28,13 +28,15 @@ export default function InteretsPage() {
             ))}
           </div>
 
-          <FadeIn>
-            <div className="card" style={{ maxWidth: '600px' }}>
-              <span className="card-tag">Engagements</span>
-              <h3 style={{ marginBottom: '0.75rem' }}>Activités bénévoles &amp; associatives</h3>
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>{engagement}</p>
-            </div>
-          </FadeIn>
+          {engagement && (
+            <FadeIn>
+              <div className="card" style={{ maxWidth: '600px' }}>
+                <span className="card-tag">Engagements</span>
+                <h3 style={{ marginBottom: '0.75rem' }}>Activités bénévoles &amp; associatives</h3>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>{engagement}</p>
+              </div>
+            </FadeIn>
+          )}
         </div>
       </section>
     </>
