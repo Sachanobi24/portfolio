@@ -100,12 +100,12 @@ export const config = {
       "Après mon BTS SIO option SISR, je souhaite évoluer dans le domaine de l'administration des systèmes et réseaux, avec une spécialisation en cybersécurité.",
     objectifsCourt: [
       "Décrocher un stage / une alternance dans une DSI ou SSII",
-      "Obtenir une certification réseau (CompTIA Network+)",
-      "Approfondir mes compétences en virtualisation (VMware, Proxmox)",
+      "Obtenir une certification réseau (CompTIA Network+), ANSSI",
+      "Approfondir mes compétences en virtualisation (Proxmox)",
     ],
     objectifsLong: [
       "Évoluer vers un poste d'Ingénieur Systèmes & Réseaux",
-      "Me spécialiser en cybersécurité (SOC Analyst, Pen Tester)",
+      "Me spécialiser en cybersécurité",
       "Obtenir des certifications avancées (CCNP, CEH, OSCP)",
       "Contribuer à la sécurisation des infrastructures d'entreprises",
     ],
