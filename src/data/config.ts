@@ -207,7 +207,7 @@ export const config = {
       titre: "Serveur Linux",
       type: "Administration système",
       description:
-        "Installation et configuration d'un serveur Debian : Apache, Nginx, PHP, MySQL, SSH, certificats SSL.",
+        "Installation et configuration d'un serveur Debian : Apache, PHP, MySQL, SSH.",
       tags: ["Linux", "Apache", "SSH"],
       url: "",
       image: "",
