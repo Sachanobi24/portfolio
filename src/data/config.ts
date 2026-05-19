@@ -20,7 +20,7 @@ export const config = {
     email: "yssoufi.mathyspro@gmail.com",           // ex: "mathys@exemple.fr"
     linkedin: "https://www.linkedin.com/in/mathys-yssoufi",        // ex: "https://linkedin.com/in/mathys-yssoufi"
     github: "https://github.com/Sachanobi24",          // ex: "https://github.com/mathys-yssoufi"
-    cvUrl: "/CV Mathys.pdf",           // ex: "/cv-mathys.pdf" (mettez votre CV dans /public)
+    cvUrl: "/CV_Mathys.pdf",           // ex: "/cv-mathys.pdf" (mettez votre CV dans /public)
   },
 
   // ----------------------------------------------------------
