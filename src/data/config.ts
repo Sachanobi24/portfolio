@@ -50,48 +50,199 @@ export const config = {
     {
       categorie: "🌐 Réseaux",
       items: [
-        { nom: "Routage / Switching", niveau: 60 },
-        { nom: "TCP/IP / VLAN", niveau: 60 },
-        { nom: "VPN / Firewall", niveau: 60 },
-        { nom: "Cisco / Packet Tracer", niveau: 60 },
+        { nom: "Routage / Switching", niveau: 60, detail: "reseau" },
+        { nom: "TCP/IP / VLAN", niveau: 60, detail: "reseau" },
+        { nom: "Pare-feu (pfSense, IPFire)", niveau: 60, detail: "firewall" },
+        { nom: "Cisco / Packet Tracer", niveau: 60, detail: "reseau" },
       ],
     },
     {
-      categorie: "🖥️ Systèmes",
+      categorie: "🖥️ Systèmes & Virtualisation",
       items: [
-        { nom: "Linux (Debian)", niveau: 55 },
-        { nom: "Windows Server", niveau: 70 },
-        { nom: "Active Directory", niveau: 65 },
-        { nom: "Virtualisation (Proxmox)", niveau: 80 },
+        { nom: "Linux (Debian)", niveau: 55, detail: "systemes" },
+        { nom: "Windows Server", niveau: 70, detail: "systemes" },
+        { nom: "Active Directory", niveau: 65, detail: "systemes" },
+        { nom: "Virtualisation (Proxmox)", niveau: 80, detail: "virtualisation" },
+        { nom: "Stockage & sauvegarde (Ceph, PBS)", niveau: 50, detail: "virtualisation" },
       ],
     },
     {
       categorie: "🔐 Sécurité & Scripting",
       items: [
-        { nom: "PowerShell", niveau: 5 },
-        { nom: "Cybersécurité", niveau: 15 },
-        { nom: "Python", niveau: 25 },
+        { nom: "Cybersécurité", niveau: 15, detail: "" },
+        { nom: "Bash", niveau: 50, detail: "scripting" },
+        { nom: "Python", niveau: 25, detail: "scripting" },
+        { nom: "PowerShell", niveau: 5, detail: "scripting" },
       ],
     },
     {
       categorie: "🖥️ Développement",
       items: [
-        { nom: "HTML / CSS", niveau: 85 },
-        { nom: "JavaScript", niveau: 65 },
-        { nom: "PHP", niveau: 55 },
-        { nom: "C#", niveau: 40 },
+        { nom: "HTML / CSS", niveau: 85, detail: "web" },
+        { nom: "JavaScript", niveau: 65, detail: "web" },
+        { nom: "PHP", niveau: 55, detail: "web" },
+        { nom: "C#", niveau: 40, detail: "web" },
       ],
     },
     {
       categorie: "🗄️ Outils & Frameworks",
       items: [
-        { nom: "SQL", niveau: 40 },
-        { nom: "Next.js / React", niveau: 55 },
-        { nom: "Docker", niveau: 50 },
-        { nom: "GLPI / Fog", niveau: 85 },
+        { nom: "Supervision (Zabbix)", niveau: 55, detail: "supervision" },
+        { nom: "Docker", niveau: 50, detail: "conteneurs" },
+        { nom: "SQL", niveau: 40, detail: "web" },
+        { nom: "Next.js / React", niveau: 55, detail: "web" },
+        { nom: "GLPI / Fog", niveau: 85, detail: "gestion-parc" },
       ],
     },
   ],
+
+  // ----------------------------------------------------------
+  // COMPÉTENCES — PAGE DE DÉTAIL (/competences)
+  // "id" correspond au champ "detail" des compétences ci-dessus.
+  // "outils" : liste libre (nom + ce que vous en faites).
+  // "projets" : liens vers vos projets (href interne ou externe).
+  // ----------------------------------------------------------
+  competencesDetail: [
+    {
+      id: "firewall",
+      emoji: "🛡️",
+      titre: "Pare-feu & sécurité réseau",
+      resume:
+        "Mise en place de pare-feu open source pour segmenter un réseau en VLAN, filtrer les flux et assurer la continuité de service.",
+      outils: [
+        {
+          nom: "pfSense",
+          usage:
+            "Solution principale : deux instances en haute disponibilité (CARP + pfsync) hébergées sur Proxmox, une interface par VLAN, filtrage et routage entre VLAN.",
+        },
+        {
+          nom: "IPFire",
+          usage:
+            "Autre pare-feu open source, basé sur Linux, que j'ai également mis en œuvre.",
+        },
+      ],
+      projets: [{ titre: "Logis Vert — pare-feu en haute disponibilité", href: "/projets/logis-vert" }],
+    },
+    {
+      id: "reseau",
+      emoji: "🌐",
+      titre: "Réseaux, VLAN & commutation",
+      resume:
+        "Conception et configuration de réseaux segmentés : VLAN, liens agrégés, routage entre VLAN.",
+      outils: [
+        { nom: "VLAN (802.1Q)", usage: "Segmentation en VLAN services, serveurs, clients, administration et synchronisation." },
+        { nom: "Switch HP 2530", usage: "Ports en untagged, trunks et uplinks fibre agrégés en LACP." },
+        { nom: "Bonding Linux", usage: "Agrégation de deux cartes réseau (bond0) pour le réseau de management des hyperviseurs." },
+        { nom: "Cisco / Packet Tracer", usage: "Routage inter-VLAN sur routeur Cisco et simulation de réseaux." },
+      ],
+      projets: [
+        { titre: "Infrastructure VLAN", href: "/Cisco_Packet_Tracer.png" },
+        { titre: "Logis Vert", href: "/projets/logis-vert" },
+      ],
+    },
+    {
+      id: "virtualisation",
+      emoji: "☁️",
+      titre: "Virtualisation, stockage & sauvegarde",
+      resume:
+        "Déploiement d'un cluster de virtualisation tolérant aux pannes, avec stockage distribué et sauvegardes planifiées.",
+      outils: [
+        { nom: "Proxmox VE", usage: "Cluster de 3 nœuds : gestion centralisée, migration de VM, haute disponibilité." },
+        { nom: "Ceph (RBD, CephFS)", usage: "Stockage distribué et répliqué sur les 3 nœuds, avec un réseau dédié." },
+        { nom: "Proxmox Backup Server", usage: "Sauvegardes quotidiennes par snapshot, politique de rétention, restaurations complète ou fichier par fichier." },
+      ],
+      projets: [{ titre: "Logis Vert", href: "/projets/logis-vert" }],
+    },
+    {
+      id: "systemes",
+      emoji: "🖥️",
+      titre: "Systèmes Linux & Windows, annuaire",
+      resume:
+        "Administration de postes Debian et de serveurs Windows, avec intégration des postes Linux à un domaine Active Directory.",
+      outils: [
+        { nom: "Debian / KDE", usage: "Administration à distance par SSH (clés, sudo), proxy apt, Wake-on-LAN, extinction programmée." },
+        { nom: "Windows Server", usage: "Contrôleurs de domaine et services associés." },
+        { nom: "Active Directory", usage: "Authentification des postes Debian (SSSD, Samba), partages montés selon le groupe, droits sudo par groupe, changement de mot de passe à la première connexion." },
+      ],
+      projets: [
+        { titre: "Automatisation d'un parc Debian intégré à Active Directory", href: "https://github.com/Sachanobi24/automatisation-parc-debian-ad" },
+      ],
+    },
+    {
+      id: "supervision",
+      emoji: "📈",
+      titre: "Supervision",
+      resume:
+        "Surveillance de l'état des serveurs et des services, avec des tableaux de bord pour centraliser les accès.",
+      outils: [
+        { nom: "Zabbix", usage: "Déploiement des agents sur le parc et création automatique des hôtes via l'API." },
+        { nom: "Homepage", usage: "Tableau de bord de services configuré par fichiers YAML, protégé par Caddy." },
+        { nom: "Logisvert", usage: "Tableau de bord développé sur mesure : voyants d'état, éditeur intégré, authentification." },
+      ],
+      projets: [
+        { titre: "Logis Vert", href: "/projets/logis-vert" },
+        { titre: "Automatisation du parc", href: "https://github.com/Sachanobi24/automatisation-parc-debian-ad" },
+      ],
+    },
+    {
+      id: "scripting",
+      emoji: "⌨️",
+      titre: "Scripting & automatisation",
+      resume:
+        "Automatisation des tâches répétitives sur un parc de machines.",
+      outils: [
+        { nom: "Bash", usage: "Déploiement par SSH sur une liste de postes : clés, sudo, proxy apt, agents de supervision, Wake-on-LAN." },
+        { nom: "Python", usage: "Interface graphique de changement de mot de passe Active Directory à la première connexion." },
+        { nom: "PowerShell", usage: "Premiers pas en administration Windows." },
+      ],
+      projets: [
+        { titre: "Automatisation du parc", href: "https://github.com/Sachanobi24/automatisation-parc-debian-ad" },
+      ],
+    },
+    {
+      id: "conteneurs",
+      emoji: "🐳",
+      titre: "Conteneurs & services web",
+      resume:
+        "Déploiement d'applications avec Docker et publication sécurisée derrière un reverse proxy.",
+      outils: [
+        { nom: "Docker / Docker Compose", usage: "Déploiement des tableaux de bord de supervision." },
+        { nom: "nginx", usage: "Service des pages et contrôle d'accès par session." },
+        { nom: "Caddy", usage: "Reverse proxy avec authentification." },
+      ],
+      projets: [{ titre: "Logis Vert", href: "/projets/logis-vert" }],
+    },
+    {
+      id: "web",
+      emoji: "💻",
+      titre: "Développement web & bases de données",
+      resume:
+        "Création de sites web, de la page statique à l'application React.",
+      outils: [
+        { nom: "HTML / CSS / JavaScript", usage: "Sites vitrines et pages interactives." },
+        { nom: "PHP / SQL", usage: "Pages dynamiques et bases de données." },
+        { nom: "Next.js / React", usage: "Ce portfolio." },
+        { nom: "C#", usage: "Programmation orientée objet." },
+      ],
+      projets: [
+        { titre: "Evorox", href: "https://evorox.netlify.app" },
+        { titre: "Ce portfolio", href: "/projets" },
+      ],
+    },
+    {
+      id: "gestion-parc",
+      emoji: "🗂️",
+      titre: "Gestion de parc & déploiement",
+      resume:
+        "Outils de gestion de parc informatique et de déploiement de postes.",
+      outils: [
+        { nom: "GLPI", usage: "Inventaire du matériel et gestion des tickets d'assistance." },
+        { nom: "FOG", usage: "Déploiement d'images système sur les postes." },
+      ],
+      projets: [],
+    },
+  ],
+
   // ----------------------------------------------------------
   // PROJET PROFESSIONNEL
   // ----------------------------------------------------------

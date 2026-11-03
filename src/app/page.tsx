@@ -139,8 +139,13 @@ export default function HomePage() {
           </div>
 
           {/* Compétences */}
-          <div style={{ marginTop: '5rem' }}>
-            <h3 className="section-title" style={{ fontSize: '1.3rem' }}>Compétences techniques</h3>
+          <div id="competences" style={{ marginTop: '5rem', scrollMarginTop: '100px' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', marginBottom: '1.5rem' }}>
+              <h3 className="section-title" style={{ fontSize: '1.3rem', marginBottom: 0 }}>Compétences techniques</h3>
+              <Link href="/competences" className="btn btn-outline" style={{ fontSize: '0.7rem' }}>
+                Détail de mes compétences →
+              </Link>
+            </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '3rem' }}>
               {competences.map((cat) => (
@@ -156,7 +161,7 @@ export default function HomePage() {
                     {cat.categorie}
                   </h4>
                   {cat.items.map((item) => (
-                    <SkillBar key={item.nom} nom={item.nom} niveau={item.niveau} />
+                    <SkillBar key={item.nom} nom={item.nom} niveau={item.niveau} detail={item.detail} />
                   ))}
                 </div>
               ))}

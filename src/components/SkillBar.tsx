@@ -1,7 +1,8 @@
 'use client'
 import { useEffect, useRef } from 'react'
+import Link from 'next/link'
 
-export default function SkillBar({ nom, niveau }: { nom: string; niveau: number }) {
+export default function SkillBar({ nom, niveau, detail }: { nom: string; niveau: number; detail?: string }) {
   const fillRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -23,7 +24,13 @@ export default function SkillBar({ nom, niveau }: { nom: string; niveau: number 
   return (
     <div className="skill-bar">
       <div className="skill-bar-header">
-        <span>{nom}</span>
+        {detail ? (
+          <Link href={`/competences#${detail}`} title="Voir le détail" style={{ color: 'inherit', borderBottom: '1px dotted var(--primary)' }}>
+            {nom} →
+          </Link>
+        ) : (
+          <span>{nom}</span>
+        )}
         <span>{niveau}%</span>
       </div>
       <div className="skill-bar-track">
