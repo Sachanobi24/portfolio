@@ -224,13 +224,14 @@ export const config = {
     },
     {
       emoji: "☁️",
-      titre: "Infrastructure cloud",
+      titre: "Logis Vert — Infrastructure virtualisée haute disponibilité",
       type: "Cloud & Virtualisation",
       description:
-        "Déploiement d'une infrastructure virtualisée sous Proxmox avec haute disponibilité.",
-      tags: ["Proxmox", "Cloud"],
+        "Cluster Proxmox VE à 3 nœuds avec stockage distribué Ceph, sauvegardes Proxmox Backup Server, pare-feu pfSense redondants (CARP) segmentés en VLAN, et tableaux de bord de supervision développés sur mesure.",
+      tags: ["Proxmox", "Ceph", "pfSense", "PBS", "VLAN", "Docker"],
       url: "",
-      image: "",
+      page: "/projets/logis-vert",
+      image: "/logis-vert/architecture.svg",
     },
     {
       emoji: "🚗",
