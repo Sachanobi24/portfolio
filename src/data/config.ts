@@ -38,7 +38,7 @@ export const config = {
     ],
     stats: [
       { nombre: "2", label: "ans BTS" },
-      { nombre: "5", label: "Projets" },
+      { nombre: "6", label: "Projets" },
       { nombre: "SISR", label: "Option" },
     ],
   },
@@ -192,6 +192,16 @@ export const config = {
   // PROJETS RÉALISÉS
   // ----------------------------------------------------------
   projets: [
+    {
+      emoji: "⚙️",
+      titre: "Automatisation d'un parc Debian intégré à Active Directory",
+      type: "Administration système & automatisation",
+      description:
+        "Scripts Bash/Python pour déployer, superviser (Zabbix) et piloter à distance un parc de postes Debian/KDE : accès SSH, sudo par groupe AD, montage des partages Samba, Wake-on-LAN et changement de mot de passe forcé à la première connexion.",
+      tags: ["Bash", "Python", "Active Directory", "Zabbix", "SSH"],
+      url: "https://github.com/Sachanobi24/automatisation-parc-debian-ad",
+      image: "",
+    },
     {
       emoji: "🌐",
       titre: "Infrastructure VLAN",
