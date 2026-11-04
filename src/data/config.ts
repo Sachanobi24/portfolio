@@ -270,14 +270,15 @@ export const config = {
   // ----------------------------------------------------------
   projetPro: {
     vision:
-      "Après mon BTS SIO option SISR, je souhaite évoluer dans le domaine de l'administration des systèmes et réseaux, avec une spécialisation en cybersécurité.",
+      "Après mon BTS SIO option SISR, je vise le Bachelor Administrateur d'Infrastructures Sécurisées (AIS) pour devenir expert de l'administration, de la conception et de la sécurisation des systèmes et réseaux d'entreprise.",
     objectifsCourt: [
+      "Intégrer le Bachelor Administrateur d'Infrastructures Sécurisées (AIS)",
       "Décrocher un stage / une alternance dans une DSI ou SSII",
       "Obtenir une certification réseau (CompTIA Network+), ANSSI",
       "Approfondir mes compétences en virtualisation (Proxmox)",
     ],
     objectifsLong: [
-      "Évoluer vers un poste d'Ingénieur Systèmes & Réseaux",
+      "Devenir Administrateur d'infrastructures sécurisées, puis évoluer vers un poste d'Ingénieur Systèmes & Réseaux",
       "Me spécialiser en cybersécurité",
       "Obtenir des certifications avancées (CCNP, CEH, OSCP)",
       "Contribuer à la sécurisation des infrastructures d'entreprises",
@@ -289,7 +290,53 @@ export const config = {
       { emoji: "🔐", nom: "Cybersécurité", desc: "Audit, pentest, protection des infrastructures" },
     ],
     poursuiteEtudes:
-      "Licence pro Réseaux & Télécoms ou Cybersécurité envisagés après le BTS.",
+      "Bachelor Administrateur d'Infrastructures Sécurisées (AIS) visé après le BTS SIO.",
+    ais: {
+      titre: "Pourquoi le Bachelor AIS ?",
+      intro:
+        "C'est la suite logique de mon BTS SIO option SISR : approfondir l'administration, la conception et la sécurisation d'infrastructures, que je pratique déjà dans mes projets.",
+      axes: [
+        {
+          emoji: "🖥️",
+          titre: "Administrer",
+          texte:
+            "Administration de postes Debian et de serveurs Windows, annuaire Active Directory, automatisation par scripts Bash et Python sur un parc de postes.",
+          liens: [
+            { titre: "Compétences systèmes", href: "/competences#systemes" },
+            { titre: "Automatisation du parc", href: "https://github.com/Sachanobi24/automatisation-parc-debian-ad" },
+          ],
+        },
+        {
+          emoji: "☁️",
+          titre: "Concevoir",
+          texte:
+            "Conception d'une infrastructure de virtualisation tolérante aux pannes : cluster Proxmox, stockage Ceph, sauvegardes PBS, pare-feu en haute disponibilité.",
+          liens: [{ titre: "Projet Logis Vert", href: "/projets/logis-vert" }],
+        },
+        {
+          emoji: "🛡️",
+          titre: "Sécuriser",
+          texte:
+            "Segmentation en VLAN, filtrage avec pfSense, droits sudo par groupe, authentification centralisée par LDAP et mots de passe changés à la première connexion.",
+          liens: [
+            { titre: "Services sécurisés", href: "/projets/infra-services" },
+            { titre: "Compétences pare-feu", href: "/competences#firewall" },
+          ],
+        },
+        {
+          emoji: "📈",
+          titre: "Superviser",
+          texte:
+            "Supervision avec Zabbix, serveur de management ProxCenter et tableaux de bord pour suivre l'état des serveurs et des services.",
+          liens: [{ titre: "Compétences supervision", href: "/competences#supervision" }],
+        },
+      ],
+      aApprofondir: [
+        "La cybersécurité, mon point de départ le plus faible aujourd'hui",
+        "Le scripting (PowerShell, Python) pour automatiser davantage",
+        "Les certifications réseau et sécurité",
+      ],
+    },
   },
 
   // ----------------------------------------------------------
