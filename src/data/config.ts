@@ -12,11 +12,11 @@ export const config = {
   identity: {
     prenom: "Mathys",
     nom: "Yssoufi",
-    poste: "Administrateur Systèmes & Réseaux",
-    statut: "DISPONIBLE — BTS SIO SISR 2024/2026",
+    poste: "Étudiant BTS SIO — Systèmes & Réseaux",
+    statut: "RECHERCHE DE STAGE — 18 JANV. → 20 FÉV.",
     description:
       "Étudiant en BTS SIO option SISR, passionné par les infrastructures réseau, la cybersécurité et l'administration système Linux/Windows.",
-    ville: "France",
+    ville: "Avranches (Manche)",
     email: "yssoufi.mathyspro@gmail.com",           // ex: "mathys@exemple.fr"
     linkedin: "https://www.linkedin.com/in/mathys-yssoufi",        // ex: "https://linkedin.com/in/mathys-yssoufi"
     github: "https://github.com/Sachanobi24",          // ex: "https://github.com/mathys-yssoufi"
@@ -34,7 +34,7 @@ export const config = {
     infos: [
       { label: "Formation", valeur: "BTS SIO option SISR" },
       { label: "Spécialité", valeur: "Réseaux & Systèmes" },
-      { label: "Disponibilité", valeur: "Stage" },
+      { label: "Disponibilité", valeur: "Stage du 18 janvier au 20 février" },
     ],
     stats: [
       { nombre: "2", label: "ans BTS" },
@@ -52,7 +52,7 @@ export const config = {
       items: [
         { nom: "Routage / Switching", niveau: 60, detail: "reseau" },
         { nom: "TCP/IP / VLAN", niveau: 60, detail: "reseau" },
-        { nom: "Pare-feu (pfSense, IPFire)", niveau: 60, detail: "firewall" },
+        { nom: "VPN / Pare-feu (pfSense, IPFire)", niveau: 60, detail: "firewall" },
         { nom: "Cisco / Packet Tracer", niveau: 60, detail: "reseau" },
       ],
     },
@@ -344,20 +344,19 @@ export const config = {
   // ----------------------------------------------------------
   experiences: [
     {
-      date: "2025-2026 — En cours",
-      titre: "Technicien Réseaux & Systèmes",
-      entreprise: "Stage / Entreprise — Ville",
-      description:
-        "Administration des serveurs Windows et Linux, configuration réseau, support utilisateurs, mise en place de VPN.",
-      tags: ["Linux", "Windows Server", "VPN"],
+      date: "Avril 2023 — 1 jour",
+      titre: "Mini-stage de découverte",
+      entreprise: "Lycée Julliot de la Morandière — Granville",
+      description: "Découverte pratique de la filière technologique STI2D.",
+      tags: ["STI2D"],
     },
     {
-      date: "2021-2022",
-      titre: "Stage Réparateur Informatique",
-      entreprise: "SOS informatique — Sartilly",
+      date: "Juin 2021 — 7 jours",
+      titre: "Stagiaire en maintenance informatique",
+      entreprise: "SOS Informatique — Sartilly",
       description:
-        "Démontage et remontage de matériel, identifications de pannes, installation de logiciel",
-      tags: [""],
+        "Démontage, nettoyage et remontage de matériel informatique ; diagnostic de premier niveau et identification de pannes ; installation et configuration de logiciels.",
+      tags: ["Maintenance", "Diagnostic", "Logiciels"],
     },
   ],
 
@@ -375,14 +374,14 @@ export const config = {
     {
       date: "2025 — 2027",
       titre: "BTS SIO option SISR",
-      etablissement: "Services Informatiques aux Organisations\nSolutions d'Infrastructure, Systèmes et Réseaux",
+      etablissement: "Lycée Notre-Dame de la Providence — Avranches",
       description:
-        "Formation en 2 ans axée sur l'administration des réseaux, la virtualisation, la cybersécurité et la gestion des systèmes d'exploitation.",
+        "Services Informatiques aux Organisations, option Solutions d'Infrastructure, Systèmes et Réseaux. Formation en 2 ans axée sur l'administration des réseaux, la virtualisation, la cybersécurité et la gestion des systèmes d'exploitation.",
       tags: ["Réseaux", "Linux", "Windows Server", "Virtualisation", "Cybersécurité"],
     },
     {
-      date: "2022 — 2025",
-      titre: "Baccalauréat",
+      date: "2023 — 2025",
+      titre: "Baccalauréat technologique STI2D",
       etablissement: "Julliot de la Morandière — Granville",
       description:
         "Obtention du Baccalauréat technologique (STI2D). Intérêt marqué pour les matières scientifiques et l'informatique.",
@@ -405,7 +404,7 @@ export const config = {
   // CERTIFICATIONS
   // ----------------------------------------------------------
   certifications: [
-    { emoji: "🌐", nom: "Cisco CCNA", organisme: "Cisco Networking Academy", date: "2025-2026", url: "/Cisco_Packet_Tracer_certificate.pdf" },
+    { emoji: "🌐", nom: "Premiers pas avec Cisco Packet Tracer", organisme: "Cisco Networking Academy", date: "Mai 2026", url: "/Cisco_Packet_Tracer_certificate.pdf" },
   ],
 
   // ----------------------------------------------------------
@@ -519,6 +518,8 @@ export const config = {
     { emoji: "🎵", nom: "Musique", desc: "Écoute" },
     { emoji: "📚", nom: "Lecture ", desc: "Livres philosophiques et mangas" },
     { emoji: "🏃", nom: "Sport", desc: "Running et activités outdoor" },
+    { emoji: "🖥️", nom: "Assemblage PC", desc: "Montage de PC et veille technologique" },
+    { emoji: "🍳", nom: "Cuisine", desc: "Apprentissage culinaire en autodidacte" },
   ],
 
   engagement: "",
