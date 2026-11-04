@@ -12,8 +12,8 @@
 <text x="145.0" y="171.0" text-anchor="middle" font-size="13" font-weight="bold">Switch d'accès</text>
 <text x="145.0" y="188.0" text-anchor="middle" font-size="10" fill="#7a9ab8">VLAN 40 · uplinks LACP</text>
 <rect x="50" y="240" width="190" height="44" rx="6" fill="#0a2240" stroke="#7fff00" stroke-width="1.5"/>
-<text x="145.0" y="259.0" text-anchor="middle" font-size="13" font-weight="bold">Serveur de management</text>
-<text x="145.0" y="276.0" text-anchor="middle" font-size="10" fill="#7a9ab8">supervision</text>
+<text x="145.0" y="259.0" text-anchor="middle" font-size="13" font-weight="bold">ProxCenter</text>
+<text x="145.0" y="276.0" text-anchor="middle" font-size="10" fill="#7a9ab8">gestion &amp; supervision</text>
 <rect x="50" y="318" width="190" height="44" rx="6" fill="#0a2240" stroke="#ff6b35" stroke-width="1.5"/>
 <text x="145.0" y="337.0" text-anchor="middle" font-size="13" font-weight="bold">Serveur de sauvegarde</text>
 <text x="145.0" y="354.0" text-anchor="middle" font-size="10" fill="#7a9ab8">Proxmox Backup Server</text>

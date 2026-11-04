@@ -38,7 +38,7 @@ export const config = {
     ],
     stats: [
       { nombre: "2", label: "ans BTS" },
-      { nombre: "6", label: "Projets" },
+      { nombre: "8", label: "Projets" },
       { nombre: "SISR", label: "Option" },
     ],
   },
@@ -120,8 +120,20 @@ export const config = {
           usage:
             "Autre pare-feu open source, basé sur Linux, que j'ai également mis en œuvre.",
         },
+        {
+          nom: "Règles de filtrage par VLAN",
+          usage:
+            "Création et diagnostic des règles pfSense (WAN et VLAN) : un réseau sans règle ne laisse rien passer, et des règles trop larges ou un NAT inutile bloquent l'administration.",
+        },
+        {
+          nom: "Squid",
+          usage: "Proxy web hébergé sur Debian, avec des règles simples à ajouter.",
+        },
       ],
-      projets: [{ titre: "Logis Vert — pare-feu en haute disponibilité", href: "/projets/logis-vert" }],
+      projets: [
+        { titre: "Logis Vert — pare-feu en haute disponibilité", href: "/projets/logis-vert" },
+        { titre: "Infrastructure de services sécurisée", href: "/projets/infra-services" },
+      ],
     },
     {
       id: "reseau",
@@ -148,6 +160,7 @@ export const config = {
         "Déploiement d'un cluster de virtualisation tolérant aux pannes, avec stockage distribué et sauvegardes planifiées.",
       outils: [
         { nom: "Proxmox VE", usage: "Cluster de 3 nœuds : gestion centralisée, migration de VM, haute disponibilité." },
+        { nom: "ProxCenter", usage: "Serveur de management dédié : interface de gestion et de supervision centralisée de l'infrastructure, rattaché au VLAN de management." },
         { nom: "Ceph (RBD, CephFS)", usage: "Stockage distribué et répliqué sur les 3 nœuds, avec un réseau dédié." },
         { nom: "Proxmox Backup Server", usage: "Sauvegardes quotidiennes par snapshot, politique de rétention, restaurations complète ou fichier par fichier." },
       ],
@@ -161,11 +174,12 @@ export const config = {
         "Administration de postes Debian et de serveurs Windows, avec intégration des postes Linux à un domaine Active Directory.",
       outils: [
         { nom: "Debian / KDE", usage: "Administration à distance par SSH (clés, sudo), proxy apt, Wake-on-LAN, extinction programmée." },
-        { nom: "Windows Server", usage: "Contrôleurs de domaine et services associés." },
-        { nom: "Active Directory", usage: "Authentification des postes Debian (SSSD, Samba), partages montés selon le groupe, droits sudo par groupe, changement de mot de passe à la première connexion." },
+        { nom: "Windows Server (2022)", usage: "Contrôleurs de domaine : AD DS, DNS, GPO et partages réseau." },
+        { nom: "Active Directory", usage: "Authentification des postes Debian (SSSD, Samba), partages montés selon le groupe, droits sudo par groupe, changement de mot de passe à la première connexion. Authentification LDAP de GLPI et de Nextcloud." },
       ],
       projets: [
         { titre: "Automatisation d'un parc Debian intégré à Active Directory", href: "https://github.com/Sachanobi24/automatisation-parc-debian-ad" },
+        { titre: "Infrastructure de services sécurisée", href: "/projets/infra-services" },
       ],
     },
     {
@@ -206,11 +220,16 @@ export const config = {
       resume:
         "Déploiement d'applications avec Docker et publication sécurisée derrière un reverse proxy.",
       outils: [
-        { nom: "Docker / Docker Compose", usage: "Déploiement des tableaux de bord de supervision." },
+        { nom: "Docker / Docker Compose", usage: "Déploiement des tableaux de bord de supervision, de GLPI et de Nextcloud." },
+        { nom: "Portainer", usage: "Interface de gestion des conteneurs." },
+        { nom: "Traefik", usage: "Reverse proxy utilisé pour exposer Nextcloud." },
         { nom: "nginx", usage: "Service des pages et contrôle d'accès par session." },
         { nom: "Caddy", usage: "Reverse proxy avec authentification." },
       ],
-      projets: [{ titre: "Logis Vert", href: "/projets/logis-vert" }],
+      projets: [
+        { titre: "Logis Vert", href: "/projets/logis-vert" },
+        { titre: "Infrastructure de services sécurisée", href: "/projets/infra-services" },
+      ],
     },
     {
       id: "web",
@@ -236,10 +255,13 @@ export const config = {
       resume:
         "Outils de gestion de parc informatique et de déploiement de postes.",
       outils: [
-        { nom: "GLPI", usage: "Inventaire du matériel et gestion des tickets d'assistance." },
-        { nom: "FOG", usage: "Déploiement d'images système sur les postes." },
+        { nom: "GLPI", usage: "Inventaire du matériel et gestion des tickets, déployé avec Docker Compose et authentifié par l'annuaire Active Directory (LDAP)." },
+        { nom: "FOG", usage: "Serveur de capture et de déploiement d'images système par PXE ; dépannage des adresses IP et des certificats." },
       ],
-      projets: [],
+      projets: [
+        { titre: "Atelier FOG", href: "/projets/atelier-fog" },
+        { titre: "Infrastructure de services sécurisée", href: "/projets/infra-services" },
+      ],
     },
   ],
 
@@ -383,6 +405,28 @@ export const config = {
       url: "",
       page: "/projets/logis-vert",
       image: "/logis-vert/architecture.svg",
+    },
+    {
+      emoji: "🛡️",
+      titre: "Infrastructure de services sécurisée (pfSense, AD, GLPI, Nextcloud)",
+      type: "Réseaux & Sécurité",
+      description:
+        "Réseau segmenté en 3 VLAN derrière pfSense sur Proxmox VE : Active Directory, GLPI et Nextcloud authentifiés en LDAP, proxy Squid, avec documentation des problèmes rencontrés et de leurs solutions.",
+      tags: ["pfSense", "VLAN", "Active Directory", "GLPI", "Nextcloud", "Docker"],
+      url: "",
+      page: "/projets/infra-services",
+      image: "/projets/services-vlan.svg",
+    },
+    {
+      emoji: "💿",
+      titre: "Atelier FOG — déploiement d'images système",
+      type: "Déploiement & Gestion de parc",
+      description:
+        "Serveur FOG sous Debian 13 pour capturer l'image d'un poste maître et la déployer par le réseau (PXE), avec la résolution des problèmes de capture.",
+      tags: ["FOG", "Debian", "PXE", "DHCP"],
+      url: "",
+      page: "/projets/atelier-fog",
+      image: "/projets/fog-atelier.svg",
     },
     {
       emoji: "🚗",

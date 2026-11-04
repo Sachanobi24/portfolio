@@ -1,75 +1,9 @@
 import Link from 'next/link'
 import FadeIn from '@/components/FadeIn'
-
-const labelStyle = {
-  fontFamily: 'var(--font-display)',
-  fontSize: '0.85rem',
-  color: 'var(--primary)',
-  letterSpacing: '0.1em',
-  textTransform: 'uppercase' as const,
-  margin: '2rem 0 1rem',
-}
-
-const muted = { color: 'var(--text-muted)', fontSize: '0.95rem' }
-
-function Sub({ children }: { children: React.ReactNode }) {
-  return <h3 style={labelStyle}>{children}</h3>
-}
-
-function Table({ head, rows }: { head: string[]; rows: string[][] }) {
-  const cell = { padding: '0.6rem 0.9rem', textAlign: 'left' as const, fontSize: '0.85rem', borderBottom: '1px solid var(--border)' }
-  return (
-    <div style={{ overflowX: 'auto', margin: '1rem 0' }}>
-      <table style={{ width: '100%', borderCollapse: 'collapse', background: 'var(--bg-card)', border: '1px solid var(--border)' }}>
-        <thead>
-          <tr>
-            {head.map((h) => (
-              <th key={h} style={{ ...cell, color: 'var(--primary)', fontFamily: 'var(--font-display)', fontWeight: 400, fontSize: '0.75rem', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-                {h}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((r, i) => (
-            <tr key={i}>
-              {r.map((c, j) => (
-                <td key={j} style={{ ...cell, color: j === 0 ? 'var(--text-main)' : 'var(--text-muted)' }}>{c}</td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  )
-}
-
-function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
-  return (
-    <figure style={{ margin: '1.5rem 0' }}>
-      <img src={src} alt={alt} style={{ width: '100%', height: 'auto', display: 'block', border: '1px solid var(--border)', borderRadius: 'var(--radius)' }} />
-      <figcaption style={{ fontSize: '0.75rem', color: 'var(--text-dim)', marginTop: '0.5rem', fontFamily: 'var(--font-display)' }}>
-        {caption}
-      </figcaption>
-    </figure>
-  )
-}
-
-function Bullets({ items }: { items: string[] }) {
-  return (
-    <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', margin: '1rem 0' }}>
-      {items.map((it, i) => (
-        <li key={i} style={{ ...muted, paddingLeft: '1.25rem', position: 'relative' }}>
-          <span style={{ position: 'absolute', left: 0, color: 'var(--primary)' }}>›</span>
-          {it}
-        </li>
-      ))}
-    </ul>
-  )
-}
+import { muted, Sub, Table, Figure, Bullets } from '@/components/ProjetDoc'
 
 const competences = [
-  'Proxmox VE', 'Cluster & HA', 'Ceph (RBD, CephFS)', 'Proxmox Backup Server',
+  'Proxmox VE', 'ProxCenter', 'Cluster & HA', 'Ceph (RBD, CephFS)', 'Proxmox Backup Server',
   'pfSense', 'CARP / pfsync', 'VLAN', 'LACP / bonding', 'Docker', 'nginx', 'Python', 'Zabbix',
 ]
 
@@ -107,7 +41,7 @@ export default function LogisVertPage() {
                 'Fournir un stockage partagé, distribué et redondant pour les machines virtuelles (Ceph).',
                 'Assurer la continuité du pare-feu avec deux pfSense en haute disponibilité (CARP).',
                 'Sauvegarder les VM et savoir les restaurer (Proxmox Backup Server).',
-                'Centraliser l’accès aux services et leur surveillance via des tableaux de bord.',
+                'Centraliser la gestion avec un serveur ProxCenter, et l’accès aux services avec des tableaux de bord.',
               ]}
             />
           </FadeIn>
@@ -129,6 +63,13 @@ export default function LogisVertPage() {
               Trois nœuds Proxmox VE forment un cluster : gestion centralisée, migration des VM entre
               nœuds et haute disponibilité. Le stockage est mutualisé grâce à Ceph, qui réplique les
               données sur les disques des trois serveurs.
+            </p>
+
+            <Sub>Serveur de management : ProxCenter</Sub>
+            <p style={muted}>
+              Un serveur dédié, <strong>ProxCenter</strong>, est rattaché au VLAN de management. Il fournit
+              une interface de gestion et de supervision centralisée de l’infrastructure : un point d’entrée
+              unique pour suivre l’ensemble des hôtes plutôt que de se connecter à chacun individuellement.
             </p>
 
             <Sub>Réseau des nœuds</Sub>
