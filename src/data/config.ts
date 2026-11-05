@@ -30,6 +30,7 @@ export const config = {
     paragraphes: [
       "Bonjour ! Je suis <strong>Mathys Yssoufi</strong>, étudiant en BTS SIO (Services Informatiques aux Organisations) option SISR (Solutions d'Infrastructure, Systèmes et Réseaux).",
       "Passionné par l'infrastructure informatique, la cybersécurité et l'administration des systèmes, je me spécialise dans la gestion des réseaux, la virtualisation et les services cloud.",
+      "Mes projets vont de la virtualisation en haute disponibilité (Proxmox, Ceph) à la sécurisation réseau (pfSense, VLAN, Active Directory) et à l'automatisation d'un parc de postes, jusqu'à Sync Technology, mon projet personnel d'hébergement et de cybersécurité.",
     ],
     infos: [
       { label: "Formation", valeur: "BTS SIO option SISR" },
@@ -92,6 +93,8 @@ export const config = {
         { nom: "SQL", niveau: 40, detail: "web" },
         { nom: "Next.js / React", niveau: 55, detail: "web" },
         { nom: "GLPI / Fog", niveau: 85, detail: "gestion-parc" },
+        { nom: "Hébergement & services web", niveau: 50, detail: "hebergement" },
+        { nom: "Documentation & gestion de projet", niveau: 60, detail: "gestion-projet" },
       ],
     },
   ],
@@ -257,13 +260,44 @@ export const config = {
         "Création de sites web, de la page statique à l'application React.",
       outils: [
         { nom: "HTML / CSS / JavaScript", usage: "Sites vitrines et pages interactives." },
-        { nom: "PHP / SQL", usage: "Pages dynamiques et bases de données." },
+        { nom: "PHP / SQL", usage: "Pages dynamiques et bases de données, par exemple l'espace client et la prise de rendez-vous de Sync Technology." },
         { nom: "Next.js / React", usage: "Ce portfolio." },
         { nom: "C#", usage: "Programmation orientée objet." },
       ],
       projets: [
         { titre: "Evorox", href: "https://evorox.netlify.app" },
         { titre: "Ce portfolio", href: "/projets" },
+      ],
+    },
+    {
+      id: "hebergement",
+      emoji: "🌍",
+      titre: "Hébergement & services web",
+      resume:
+        "Mise en ligne et exploitation de plusieurs services sous un même domaine, avec un compte unique pour les utilisateurs.",
+      outils: [
+        { nom: "Sous-domaines par usage", usage: "Un sous-domaine par service (cloud, messagerie, API, support, supervision, cybersécurité…) : 17 services publiés sous le domaine de Sync Technology." },
+        { nom: "Sync ID et API", usage: "Compte utilisateur unique et API partagée par tous les services du groupe." },
+        { nom: "Page de statut", usage: "État des services consultable en ligne." },
+        { nom: "Espace client et prise de rendez-vous", usage: "Pages dynamiques avec authentification, facturation et réservation de créneaux." },
+      ],
+      projets: [{ titre: "Sync Technology", href: "/projets/sync-technology" }],
+    },
+    {
+      id: "gestion-projet",
+      emoji: "🗺️",
+      titre: "Documentation & gestion de projet",
+      resume:
+        "Structurer un projet, fixer des priorités et documenter chaque réalisation pour qu'elle soit reproductible.",
+      outils: [
+        { nom: "Cartographie (MindMeister)", usage: "Carte mentale de plus de 250 éléments : filières, filiales, offres, fonctions de groupe et priorités." },
+        { nom: "Feuille de route", usage: "Séparation de ce qui est en ligne, prévu à 12-24 mois et reporté." },
+        { nom: "Documentation technique", usage: "Rédaction de documentations d'infrastructure : architecture, procédures de sauvegarde et de restauration, tableau des problèmes rencontrés et de leurs solutions." },
+      ],
+      projets: [
+        { titre: "Sync Technology", href: "/projets/sync-technology" },
+        { titre: "Logis Vert", href: "/projets/logis-vert" },
+        { titre: "Infrastructure de services sécurisée", href: "/projets/infra-services" },
       ],
     },
     {
@@ -380,10 +414,11 @@ export const config = {
   ],
 
   competencesAcquises: [
-    { tag: "Réseau", titre: "Infrastructure réseau", desc: "Configuration routeurs, switches, mise en place VLAN, gestion DHCP/DNS." },
-    { tag: "Système", titre: "Administration serveurs", desc: "Déploiement et maintenance de serveurs Linux/Windows, virtualisation." },
-    { tag: "Sécurité", titre: "Cybersécurité", desc: "Pare-feu, VPN." },
-    { tag: "Support", titre: "Helpdesk & Support", desc: "Support niveau 1 et 2, ticketing." },
+    { tag: "Réseau", titre: "Infrastructure réseau", desc: "Segmentation en VLAN, routage inter-VLAN, liens agrégés (LACP), pare-feu pfSense en haute disponibilité, simulation sous Cisco Packet Tracer." },
+    { tag: "Système", titre: "Administration serveurs", desc: "Cluster Proxmox VE avec stockage Ceph, sauvegardes PBS, serveurs Debian et Windows Server, Active Directory et authentification LDAP." },
+    { tag: "Sécurité", titre: "Cybersécurité", desc: "Filtrage par pare-feu (pfSense, IPFire), VPN, droits sudo par groupe, veille CERT-FR/ANSSI et testeur de liens anti-phishing." },
+    { tag: "Support", titre: "Gestion de parc & support", desc: "Inventaire et tickets avec GLPI, déploiement d'images avec FOG, supervision Zabbix, maintenance matérielle." },
+    { tag: "Automatisation", titre: "Scripting", desc: "Scripts Bash et Python pour déployer, configurer et superviser un parc de postes à distance." },
   ],
 
   // ----------------------------------------------------------
