@@ -38,7 +38,7 @@ export const config = {
     ],
     stats: [
       { nombre: "2", label: "ans BTS" },
-      { nombre: "8", label: "Projets" },
+      { nombre: "9", label: "Projets" },
       { nombre: "SISR", label: "Option" },
     ],
   },
@@ -69,7 +69,7 @@ export const config = {
     {
       categorie: "🔐 Sécurité & Scripting",
       items: [
-        { nom: "Cybersécurité", niveau: 15, detail: "" },
+        { nom: "Cybersécurité", niveau: 15, detail: "cybersecurite" },
         { nom: "Bash", niveau: 50, detail: "scripting" },
         { nom: "Python", niveau: 25, detail: "scripting" },
         { nom: "PowerShell", niveau: 5, detail: "scripting" },
@@ -183,6 +183,23 @@ export const config = {
       ],
     },
     {
+      id: "cybersecurite",
+      emoji: "🔐",
+      titre: "Cybersécurité & veille",
+      resume:
+        "Sensibilisation, veille sur les alertes officielles et outils simples de protection, développés dans mon projet personnel Sync Technology.",
+      outils: [
+        { nom: "Veille CERT-FR / ANSSI", usage: "Intégration du flux RSS officiel du CERT-FR pour afficher les alertes et avis de sécurité." },
+        { nom: "Testeur de liens anti-phishing", usage: "Comparaison avec une liste blanche et analyse de la syntaxe pour détecter hameçonnage et typosquatting." },
+        { nom: "17Cyber (Cybermalveillance.gouv.fr)", usage: "Orientation des victimes vers le diagnostic officiel." },
+        { nom: "Segmentation et accès", usage: "VLAN, filtrage pfSense, sudo par groupe et authentification centralisée dans mes projets d'infrastructure." },
+      ],
+      projets: [
+        { titre: "Sync Technology", href: "/projets/sync-technology" },
+        { titre: "Infrastructure de services sécurisée", href: "/projets/infra-services" },
+      ],
+    },
+    {
       id: "supervision",
       emoji: "📈",
       titre: "Supervision",
@@ -196,6 +213,7 @@ export const config = {
       projets: [
         { titre: "Logis Vert", href: "/projets/logis-vert" },
         { titre: "Automatisation du parc", href: "https://github.com/Sachanobi24/automatisation-parc-debian-ad" },
+        { titre: "Sync Technology (page de statut)", href: "/projets/sync-technology" },
       ],
     },
     {
@@ -321,6 +339,7 @@ export const config = {
           liens: [
             { titre: "Services sécurisés", href: "/projets/infra-services" },
             { titre: "Compétences pare-feu", href: "/competences#firewall" },
+            { titre: "Sync Technology", href: "/projets/sync-technology" },
           ],
         },
         {
@@ -411,6 +430,18 @@ export const config = {
   // PROJETS RÉALISÉS
   // ----------------------------------------------------------
   projets: [
+    {
+      emoji: "🔄",
+      titre: "Sync Technology — groupe d'infrastructure numérique",
+      type: "Projet personnel · Projet phare",
+      description:
+        "Un groupe fictif conçu et mis en ligne seul : 17 services (cloud, messagerie, API, supervision, cybersécurité) sous un même domaine et un compte client unique, cartographié en plus de 250 éléments.",
+      tags: ["Hébergement", "Cloud", "API", "Cybersécurité", "Supervision"],
+      url: "https://sync-technology.fr/",
+      page: "/projets/sync-technology",
+      phare: true,
+      image: "/projets/sync-carte.svg",
+    },
     {
       emoji: "⚙️",
       titre: "Automatisation d'un parc Debian intégré à Active Directory",

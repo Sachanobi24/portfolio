@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" role="img" aria-label="Vue simplifiée de la carte mentale du groupe Sync Technology">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#7a9ab8"/></marker></defs>
+<rect width="1000" height="560" fill="#071a2e"/>
+<g font-family="ui-monospace,Menlo,Consolas,monospace" fill="#e0f4ff">
+<text x="20" y="28" text-anchor="start" font-size="13" fill="#00d4ff">SYNC TECHNOLOGY — VUE SIMPLIFIEE DE LA CARTE MENTALE (250+ ELEMENTS)</text>
+<rect x="385" y="230" width="230" height="100" rx="50" fill="#0a2240" stroke="#00d4ff" stroke-width="2.5"/>
+<text x="500" y="274" text-anchor="middle" font-size="17" font-weight="bold">Sync Technology</text>
+<text x="500" y="298" text-anchor="middle" font-size="12" fill="#7a9ab8">Groupe &amp; Fondation</text>
+<line x1="250" y1="92" x2="385" y2="280" stroke="#00d4ff" stroke-width="1.4"/>
+<rect x="20" y="60" width="230" height="64" rx="6" fill="#0a2240" stroke="#00d4ff" stroke-width="1.5"/>
+<text x="135.0" y="89.0" text-anchor="middle" font-size="14" font-weight="bold">Filières</text>
+<text x="135.0" y="106.0" text-anchor="middle" font-size="11" fill="#7a9ab8">12 : Cloud, Hosting, Cyber…</text>
+<line x1="250" y1="210" x2="385" y2="280" stroke="#7fff00" stroke-width="1.4"/>
+<rect x="20" y="178" width="230" height="64" rx="6" fill="#0a2240" stroke="#7fff00" stroke-width="1.5"/>
+<text x="135.0" y="207.0" text-anchor="middle" font-size="14" font-weight="bold">Filiales par pays</text>
+<text x="135.0" y="224.0" text-anchor="middle" font-size="11" fill="#7a9ab8">9 pays : France, Belgique…</text>
+<line x1="250" y1="328" x2="385" y2="280" stroke="#ff6b35" stroke-width="1.4"/>
+<rect x="20" y="296" width="230" height="64" rx="6" fill="#0a2240" stroke="#ff6b35" stroke-width="1.5"/>
+<text x="135.0" y="325.0" text-anchor="middle" font-size="14" font-weight="bold">Fondation</text>
+<text x="135.0" y="342.0" text-anchor="middle" font-size="11" fill="#7a9ab8">Reconditionnement, inclusion</text>
+<line x1="250" y1="446" x2="385" y2="280" stroke="#b48cff" stroke-width="1.4"/>
+<rect x="20" y="414" width="230" height="64" rx="6" fill="#0a2240" stroke="#b48cff" stroke-width="1.5"/>
+<text x="135.0" y="443.0" text-anchor="middle" font-size="14" font-weight="bold">Priorités</text>
+<text x="135.0" y="460.0" text-anchor="middle" font-size="11" fill="#7a9ab8">Maintenant · 12-24 mois…</text>
+<line x1="750" y1="92" x2="615" y2="280" stroke="#00d4ff" stroke-width="1.4"/>
+<rect x="750" y="60" width="230" height="64" rx="6" fill="#0a2240" stroke="#00d4ff" stroke-width="1.5"/>
+<text x="865.0" y="89.0" text-anchor="middle" font-size="14" font-weight="bold">Fonctions du groupe</text>
+<text x="865.0" y="106.0" text-anchor="middle" font-size="11" fill="#7a9ab8">RSSI, RGPD, HSE, finance…</text>
+<line x1="750" y1="210" x2="615" y2="280" stroke="#7fff00" stroke-width="1.4"/>
+<rect x="750" y="178" width="230" height="64" rx="6" fill="#0a2240" stroke="#7fff00" stroke-width="1.5"/>
+<text x="865.0" y="207.0" text-anchor="middle" font-size="14" font-weight="bold">Segments clients</text>
+<text x="865.0" y="224.0" text-anchor="middle" font-size="11" fill="#7a9ab8">Particuliers · PME · Entreprises</text>
+<line x1="750" y1="328" x2="615" y2="280" stroke="#ff6b35" stroke-width="1.4"/>
+<rect x="750" y="296" width="230" height="64" rx="6" fill="#0a2240" stroke="#ff6b35" stroke-width="1.5"/>
+<text x="865.0" y="325.0" text-anchor="middle" font-size="14" font-weight="bold">Offres et packs</text>
+<text x="865.0" y="342.0" text-anchor="middle" font-size="11" fill="#7a9ab8">Numérique, Habitat, Esport</text>
+<line x1="750" y1="446" x2="615" y2="280" stroke="#b48cff" stroke-width="1.4"/>
+<rect x="750" y="414" width="230" height="64" rx="6" fill="#0a2240" stroke="#b48cff" stroke-width="1.5"/>
+<text x="865.0" y="443.0" text-anchor="middle" font-size="14" font-weight="bold">Pistes pour plus tard</text>
+<text x="865.0" y="460.0" text-anchor="middle" font-size="11" fill="#7a9ab8">Academy, énergie, revendeurs</text>
+</g>
+</svg>

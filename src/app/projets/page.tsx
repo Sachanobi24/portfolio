@@ -18,8 +18,40 @@ export default function ProjetsPage() {
 
       <section className="section">
         <div className="container">
+          {projets.filter((p) => (p as { phare?: boolean }).phare).map((p) => (
+            <FadeIn key={p.titre}>
+              <article className="project-card" style={{ display: 'flex', flexWrap: 'wrap', marginBottom: '2.5rem', borderColor: 'var(--primary)' }}>
+                {p.image && (
+                  <div style={{ flex: '1 1 380px', minHeight: '260px', background: 'var(--bg-card)', display: 'flex', alignItems: 'center' }}>
+                    <img src={p.image} alt={`Aperçu ${p.titre}`} style={{ width: '100%', height: 'auto', display: 'block' }} />
+                  </div>
+                )}
+                <div style={{ flex: '1 1 380px', padding: '2rem' }}>
+                  <span className="tech-badge" style={{ marginBottom: '1rem', display: 'inline-block' }}>★ Projet phare · {p.type}</span>
+                  <h2 style={{ fontSize: '1.5rem', margin: '0.5rem 0 1rem' }}>{p.titre}</h2>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>{p.description}</p>
+                  <div className="project-tags">
+                    {p.tags.map((t) => (
+                      <span key={t} className="tech-badge">{t}</span>
+                    ))}
+                  </div>
+                  <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginTop: '1.5rem' }}>
+                    <Link href={(p as { page?: string }).page as string} className="btn btn-primary" style={{ fontSize: '0.7rem' }}>
+                      Voir le projet en détail →
+                    </Link>
+                    {p.url && (
+                      <a href={p.url} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ fontSize: '0.7rem' }}>
+                        Visiter le site ↗
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </article>
+            </FadeIn>
+          ))}
+
           <div className="projects-grid">
-            {projets.map((projet, i) => (
+            {projets.filter((p) => !(p as { phare?: boolean }).phare).map((projet, i) => (
               <FadeIn key={i} delay={i * 80}>
                 <article className="project-card">
 

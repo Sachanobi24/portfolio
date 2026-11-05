@@ -4,7 +4,8 @@ import SkillBar from '@/components/SkillBar'
 import { config } from '@/data/config'
 
 export default function HomePage() {
-  const { identity, apropos, competences } = config
+  const { identity, apropos, competences, projets } = config
+  const phare = projets.find((p) => (p as { phare?: boolean }).phare)
 
   return (
     <>
@@ -63,6 +64,29 @@ export default function HomePage() {
           </svg>
         </div>
       </section>
+
+      {/* ── PROJET PHARE ── */}
+      {phare && (
+        <section className="section" style={{ paddingBottom: 0 }}>
+          <div className="container">
+            <FadeIn>
+              <div className="card" style={{ padding: '2rem', display: 'flex', flexWrap: 'wrap', gap: '1.5rem', alignItems: 'center', justifyContent: 'space-between', borderColor: 'var(--primary)' }}>
+                <div style={{ flex: '1 1 380px' }}>
+                  <p className="page-hero-label" style={{ marginBottom: '0.5rem' }}>★ Projet phare</p>
+                  <h2 style={{ fontSize: '1.5rem', marginBottom: '0.75rem' }}>{phare.titre}</h2>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', maxWidth: '640px' }}>{phare.description}</p>
+                </div>
+                <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+                  <Link href={(phare as { page?: string }).page as string} className="btn btn-primary">Découvrir le projet →</Link>
+                  {phare.url && (
+                    <a href={phare.url} target="_blank" rel="noopener noreferrer" className="btn btn-outline">Visiter le site ↗</a>
+                  )}
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </section>
+      )}
 
       {/* ── À PROPOS ── */}
       <section className="section" id="a-propos">
