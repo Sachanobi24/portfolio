@@ -71,7 +71,7 @@ export default function SyncTechnologyPage() {
           <p className="page-hero-label">Projet personnel · Projet phare</p>
           <h1>Sync Technology</h1>
           <p>
-            Un groupe d’infrastructure numérique conçu et mis en ligne par mes soins, en parallèle de mon BTS SIO SISR :
+            Un projet personnel, réalisé en dehors du lycée en parallèle de mon BTS SIO SISR : un groupe d’infrastructure numérique avec
             hébergement, cloud, messagerie, API, supervision et cybersécurité réunis sous une seule marque et un seul compte client.
           </p>
           <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginTop: '1.5rem' }}>
@@ -106,13 +106,13 @@ export default function SyncTechnologyPage() {
           <FadeIn>
             <h2 className="section-title">Le projet</h2>
             <p style={muted}>
-              Sync Technology est un groupe fictif que j’ai imaginé, structuré puis construit : une maison mère, des filiales par
+              Sync Technology est un groupe fictif : une maison mère, des filiales par
               pays, une Fondation (reconditionnement de matériel, inclusion numérique) et des filières allant du cloud à la
               cybersécurité en passant par l’esport et la maison connectée.
             </p>
             <p style={{ ...muted, marginTop: '1rem' }}>
-              J’ai d’abord cartographié l’ensemble dans une carte mentale : filières, segments clients (particuliers, PME et
-              associations, entreprises), offres et fonctions de groupe. J’ai ensuite mis en ligne les services prioritaires sous
+              L’ensemble a d’abord été cartographié dans une carte mentale : filières, segments clients (particuliers, PME et
+              associations, entreprises), offres et fonctions de groupe. Les services prioritaires ont ensuite été mis en ligne sous
               le domaine <a href="https://sync-technology.fr/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)' }}>sync-technology.fr</a>.
             </p>
             <Figure

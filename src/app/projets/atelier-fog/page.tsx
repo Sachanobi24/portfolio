@@ -26,7 +26,7 @@ export default function AtelierFogPage() {
             <p style={muted}>
               FOG est une solution libre de déploiement d’images : on capture le système d’un poste
               « maître », puis on le déploie sur d’autres postes par le réseau (démarrage PXE), sans
-              installer chaque machine à la main. L’atelier consistait à monter cette chaîne de bout en bout.
+              installer chaque machine à la main. J’ai monté cette chaîne de bout en bout, seul, au lycée.
             </p>
           </FadeIn>
 
@@ -77,6 +77,17 @@ export default function AtelierFogPage() {
             <Code>{`sudo userdel fog
 cd fogproject-stable/bin
 ./installfog.sh --recreate-CA --recreate-keys`}</Code>
+          </FadeIn>
+
+          <FadeIn>
+            <h2 className="section-title" style={{ marginTop: '3rem' }}>Ce que j’ai appris</h2>
+            <Bullets
+              items={[
+                'Le mode d’adressage du serveur (DHCP) se choisit dès l’installation : le corriger après coup oblige à tout refaire.',
+                'Les adresses IP de FOG se trouvent à plusieurs endroits (fichiers de configuration et interface web), et il faut tous les mettre à jour.',
+                'Lire les messages d’erreur et les fichiers de configuration m’a aidé à comprendre pourquoi la capture échouait.',
+              ]}
+            />
           </FadeIn>
 
           <FadeIn>

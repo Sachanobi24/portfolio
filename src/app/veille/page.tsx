@@ -2,6 +2,7 @@
 import { useEffect, useState, useCallback } from 'react'
 import FadeIn from '@/components/FadeIn'
 import { config } from '@/data/config'
+import { muted, Sub, Table, Bullets } from '@/components/ProjetDoc'
 
 interface RSSItem {
   titre: string
@@ -13,7 +14,7 @@ interface RSSItem {
 }
 
 const KEYWORDS: Record<string, string[]> = {
-  'Conteneurisation':   ['docker', 'kubernetes', 'container', 'conteneur', 'helm', 'k8s', 'podman'],
+  'Conteneurisation':   ['docker', 'kubernetes', 'container', 'conteneur', 'helm', 'k8s', 'podman', 'rootless', 'oci'],
   'Zero Trust Architecture': ['zero trust', 'ztna', 'zero-trust'],
   'Edge Computing':     ['edge computing', 'edge', 'iot', 'fog computing'],
   'Wi-Fi 7 (802.11be)': ['wi-fi 7', 'wifi 7', '802.11be', 'wifi'],
@@ -78,6 +79,21 @@ export default function VeillePage() {
 
       <section className="section">
         <div className="container">
+
+          <FadeIn>
+            <div style={{ maxWidth: '800px', marginBottom: '3rem' }}>
+              <h2 className="section-title">Mon sujet : la conteneurisation</h2>
+              <p style={muted}>
+                J’ai choisi ce sujet parce que j’adore la conteneurisation et que j’aime faire du Docker. Je l’utilise déjà dans
+                mes projets : GLPI, Nextcloud, Portainer et mes tableaux de bord de supervision.
+              </p>
+              <p style={{ ...muted, marginTop: '1rem' }}>
+                Je ne veux pas me contenter de lire des articles. Je veux aussi comparer Docker avec Podman, que je n’ai pas
+                encore testé : c’est le comparatif plus bas sur cette page. Les articles du flux RSS ci-dessous me servent à
+                suivre les nouveautés sur ces deux outils.
+              </p>
+            </div>
+          </FadeIn>
 
           <div className="veille-grid">
             {veille.map((article, i) => {
@@ -214,6 +230,38 @@ export default function VeillePage() {
               )}
             </div>
           )}
+
+          <div style={{ marginTop: '4rem', maxWidth: '900px' }}>
+            <h2 className="section-title">Comparatif : Docker et Podman</h2>
+            <p style={muted}>
+              Ce comparatif vient de la lecture des documentations officielles. Je n’ai pas encore testé Podman moi-même : la
+              liste de tests plus bas me permettra de vérifier chaque point et de compléter avec mes résultats.
+            </p>
+            <Table
+              head={['Critère', 'Docker', 'Podman']}
+              rows={[
+                ['Fonctionnement', 'Un client et un démon (dockerd) toujours actif qui gère les conteneurs.', 'Sans démon : chaque conteneur est un processus lancé directement par l’utilisateur.'],
+                ['Droits root', 'Le démon tourne en root par défaut (un mode rootless existe).', 'Fonctionne couramment sans root, avec les droits de l’utilisateur.'],
+                ['Commandes', 'docker run, docker ps, docker build…', 'Presque identiques (podman run, podman ps…), un alias est possible.'],
+                ['Images', 'Images au format OCI, depuis Docker Hub.', 'Mêmes images OCI : celles que j’utilise déjà devraient fonctionner.'],
+                ['Plusieurs conteneurs', 'Docker Compose.', 'podman compose, ou « pods » (groupes de conteneurs comme dans Kubernetes).'],
+                ['Démarrage automatique', 'Politiques de redémarrage gérées par le démon.', 'Intégration à systemd : le conteneur démarre comme un service.'],
+                ['Écosystème', 'Très répandu, énormément de tutoriels.', 'Très présent sur les distributions Red Hat (RHEL, Fedora).'],
+              ]}
+            />
+
+            <Sub>Mes tests prévus</Sub>
+            <Bullets
+              items={[
+                'Installer Podman sur une VM Debian.',
+                'Relancer un de mes conteneurs (par exemple nginx) avec la même image qu’avec Docker.',
+                'Le lancer sans root et regarder sous quel utilisateur tourne le processus.',
+                'Migrer un de mes fichiers Docker Compose vers Podman.',
+                'Démarrer un conteneur comme un service systemd.',
+                'Comparer la consommation mémoire au repos.',
+              ]}
+            />
+          </div>
 
         </div>
       </section>

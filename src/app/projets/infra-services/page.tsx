@@ -30,9 +30,9 @@ export default function InfraServicesPage() {
           <FadeIn>
             <h2 className="section-title" style={{ marginTop: '2.5rem' }}>Contexte et objectifs</h2>
             <p style={muted}>
-              Déployer sur un hôte Proxmox VE un réseau d’entreprise complet : un pare-feu pfSense qui
+              J’ai déployé seul, au lycée, sur un hôte Proxmox VE, un réseau d’entreprise complet : un pare-feu pfSense qui
               segmente et filtre les flux, un annuaire Active Directory, et des services applicatifs
-              (gestion de parc, partage de fichiers, proxy) dont l’authentification est centralisée par LDAP.
+              (gestion de parc, partage de fichiers, proxy) dont l’authentification passe par LDAP.
             </p>
             <Bullets
               items={[
@@ -92,7 +92,7 @@ export default function InfraServicesPage() {
 
           <FadeIn>
             <h2 className="section-title" style={{ marginTop: '3rem' }}>Difficultés rencontrées et solutions</h2>
-            <p style={muted}>Chaque problème a été diagnostiqué puis documenté, voici les principaux.</p>
+            <p style={muted}>J’ai documenté chaque problème rencontré, voici les principaux.</p>
             <Sub>Réseau et systèmes</Sub>
             <Table
               head={['Problème', 'Cause', 'Solution']}
@@ -111,6 +111,18 @@ export default function InfraServicesPage() {
                 'GLPI : difficultés avec le script de remontée LDAP vers le serveur et avec la remontée d’inventaire.',
                 'Squid : aucune difficulté.',
                 'Windows 10/11 et Windows Server 2022/2025 : ne démarrent pas sur un processeur à l’architecture trop ancienne.',
+              ]}
+            />
+          </FadeIn>
+
+          <FadeIn>
+            <h2 className="section-title" style={{ marginTop: '3rem' }}>Ce que j’ai appris</h2>
+            <Bullets
+              items={[
+                'Sans règles de pare-feu, aucun flux ne passe entre les VLAN : il faut les créer VLAN par VLAN, puis tester.',
+                'Une simple erreur de mot-clé dans un fichier de configuration réseau suffit à priver une machine d’adresse IP.',
+                'Le DNS et les règles SMB décident si les lecteurs réseau fonctionnent depuis le VLAN des clients.',
+                'Pour Nextcloud, adapter un tutoriel à mon cas marche mieux que de le copier tel quel.',
               ]}
             />
           </FadeIn>

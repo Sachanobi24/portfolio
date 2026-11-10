@@ -47,6 +47,26 @@ export const config = {
   // ----------------------------------------------------------
   // COMPÉTENCES TECHNIQUES
   // ----------------------------------------------------------
+  // ----------------------------------------------------------
+  // STAGE RECHERCHÉ (bloc de la page d'accueil)
+  // ----------------------------------------------------------
+  stage: {
+    titre: "Le stage que je recherche",
+    intro: "Je cherche un stage de technicien système, réseau et support, du 18 janvier au 20 février.",
+    missions: "Ce qui m'intéresse le plus : la supervision et le déploiement de postes.",
+    aDejaFait: [
+      "Supervision : j'ai déployé des agents Zabbix sur un parc de postes avec un script, et créé les machines dans Zabbix grâce à son API.",
+      "Déploiement : j'ai configuré des postes Debian à distance en SSH (clés, sudo, proxy apt) et capturé puis déployé des images système avec FOG.",
+      "Gestion de parc : j'ai installé GLPI avec Docker pour faire l'inventaire du matériel.",
+    ],
+    suite: "Après le BTS, je vise le Bachelor Administrateur d'Infrastructures Sécurisées (AIS).",
+    liens: [
+      { titre: "Supervision", href: "/competences#supervision" },
+      { titre: "Gestion de parc", href: "/competences#gestion-parc" },
+      { titre: "Mon script de déploiement", href: "https://github.com/Sachanobi24/automatisation-parc-debian-ad" },
+    ],
+  },
+
   competences: [
     {
       categorie: "🌐 Réseaux",
@@ -470,7 +490,7 @@ export const config = {
       titre: "Sync Technology — groupe d'infrastructure numérique",
       type: "Projet personnel · Projet phare",
       description:
-        "Un groupe fictif conçu et mis en ligne seul : 17 services (cloud, messagerie, API, supervision, cybersécurité) sous un même domaine et un compte client unique, cartographié en plus de 250 éléments.",
+        "Un groupe fictif, projet personnel hors lycée : 17 services (cloud, messagerie, API, supervision, cybersécurité) sous un même domaine et un compte client unique, cartographié en plus de 250 éléments.",
       tags: ["Hébergement", "Cloud", "API", "Cybersécurité", "Supervision"],
       url: "https://sync-technology.fr/",
       page: "/projets/sync-technology",
@@ -569,9 +589,9 @@ export const config = {
       categorie: "Système",
       titre: "Conteneurisation",
       contenu:
-        "Docker et Kubernetes s'imposent comme standards pour le déploiement d'applications en production.",
-      date: "2024",
-      keywords: ["docker", "kubernetes", "conteneur"],
+        "J'utilise Docker dans mes projets et je veux le comparer avec Podman. Clique pour voir les derniers articles.",
+      date: "2026",
+      keywords: ["docker", "podman", "kubernetes", "conteneur"],
     },
   ],
 

@@ -4,7 +4,7 @@ import SkillBar from '@/components/SkillBar'
 import { config } from '@/data/config'
 
 export default function HomePage() {
-  const { identity, apropos, competences, projets } = config
+  const { identity, apropos, competences, projets, stage } = config
   const phare = projets.find((p) => (p as { phare?: boolean }).phare)
 
   return (
@@ -62,6 +62,37 @@ export default function HomePage() {
             <line x1="350" y1="280" x2="300" y2="180" stroke="#7fff00" strokeWidth="0.5" opacity="0.3" />
             <line x1="80" y1="100" x2="50" y2="300" stroke="#00d4ff" strokeWidth="0.5" opacity="0.2" />
           </svg>
+        </div>
+      </section>
+
+      {/* ── STAGE RECHERCHÉ ── */}
+      <section className="section" style={{ paddingBottom: 0 }}>
+        <div className="container">
+          <FadeIn>
+            <div className="card" style={{ padding: '2rem' }}>
+              <h2 className="section-title" style={{ fontSize: '1.4rem' }}>{stage.titre}</h2>
+              <p style={{ fontSize: '1rem', marginBottom: '0.75rem' }}>{stage.intro}</p>
+              <p style={{ color: 'var(--text-muted)', marginBottom: '1.25rem' }}>{stage.missions}</p>
+              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.25rem' }}>
+                {stage.aDejaFait.map((l) => (
+                  <li key={l} style={{ color: 'var(--text-muted)', fontSize: '0.9rem', paddingLeft: '1.25rem', position: 'relative' }}>
+                    <span style={{ position: 'absolute', left: 0, color: 'var(--primary)' }}>›</span>
+                    {l}
+                  </li>
+                ))}
+              </ul>
+              <p style={{ color: 'var(--text-dim)', fontSize: '0.85rem', marginBottom: '1.25rem' }}>{stage.suite}</p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
+                {stage.liens.map((l) =>
+                  l.href.startsWith('/') ? (
+                    <Link key={l.titre} href={l.href} className="btn btn-outline" style={{ fontSize: '0.65rem', padding: '0.4rem 0.75rem' }}>{l.titre} →</Link>
+                  ) : (
+                    <a key={l.titre} href={l.href} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ fontSize: '0.65rem', padding: '0.4rem 0.75rem' }}>{l.titre} ↗</a>
+                  )
+                )}
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 

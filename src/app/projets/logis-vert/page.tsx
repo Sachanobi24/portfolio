@@ -31,9 +31,9 @@ export default function LogisVertPage() {
           <FadeIn>
             <h2 className="section-title" style={{ marginTop: '2.5rem' }}>Contexte et objectifs</h2>
             <p style={muted}>
-              Le projet consiste à mettre en place, dans une baie du laboratoire, une infrastructure de
-              virtualisation tolérante aux pannes, puis à la documenter : architecture, procédures de
-              sauvegarde et de restauration, supervision.
+              J’ai réalisé ce projet seul, au lycée, dans le cadre de mon BTS SIO. J’ai mis en place, dans une baie du
+              laboratoire, une infrastructure de virtualisation tolérante aux pannes, puis je l’ai documentée :
+              architecture, procédures de sauvegarde et de restauration, supervision.
             </p>
             <Bullets
               items={[
@@ -188,6 +188,18 @@ export default function LogisVertPage() {
                 'Architecture en deux conteneurs : nginx et un petit service d’authentification en Python.',
                 'Authentification : mots de passe hachés (PBKDF2-SHA256, 200 000 itérations), cookie de session signé de 12 h (HttpOnly, SameSite=Lax), blocage de l’IP 60 secondes après 5 échecs.',
                 'Personnalisation : vrais logos des services et thème Dragon Ball.',
+              ]}
+            />
+          </FadeIn>
+
+          {/* ---------- Ce que j'ai appris ---------- */}
+          <FadeIn>
+            <h2 className="section-title" style={{ marginTop: '3rem' }}>Ce que j’ai appris</h2>
+            <Bullets
+              items={[
+                'Séparer le réseau de stockage (Ceph, corosync) du réseau de management pour que le trafic des disques ne gêne pas l’administration.',
+                'Une sauvegarde ne vaut que si on sait restaurer : j’ai documenté trois méthodes de restauration et une liste de vérifications à faire après.',
+                'Une paire de pare-feu en haute disponibilité demande de tester régulièrement le basculement, pas seulement de le configurer.',
               ]}
             />
           </FadeIn>
